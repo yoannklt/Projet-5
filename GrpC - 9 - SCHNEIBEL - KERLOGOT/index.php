@@ -100,8 +100,18 @@
     <div id="heart-red" class="center wow animate__animated animate__fadeIn">
         <img src="img/icone-de-coeur-rouge-1.png" alt="Sam&Yoann Portfolio un gros coeur rouge avec à l'intérieur Antoine en gigachad car on les admire lui et ses gros muscles">
     </div>
-
-    <form action=""></form>
+    <h2>Créer son compte</h2>
+    <div class="container signup-form">
+        <form action="action/signup.php" method="post">
+            <input type="text" name="first_name" placeholder="Nom"/>
+            <input type="text" name="second_name" placeholder="Prénom"/>
+            <input type="text" name="user_name" placeholder="User name"/>
+            <input type="email" name="email" placeholder="Mail"/>
+            <input type="password" name="password" placeholder="Mot de Passe"/>
+            <input type='submit' value='Valider'/>
+        </form>
+    </div>
+    <?php ?>
 
     <footer class="page-footer green lighten-2">
         <div class="container">
