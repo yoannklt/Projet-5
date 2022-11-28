@@ -101,22 +101,7 @@
         <img src="img/icone-de-coeur-rouge-1.png" alt="Sam&Yoann Portfolio un gros coeur rouge avec à l'intérieur Antoine en gigachad car on les admire lui et ses gros muscles">
     </div>
 
-    <div id="popup1" class="overlay">
-        <div class="popup green lighten-5">
-            <h2 class="green-text text-lighten-2">Nous Contacter :</h2>
-            <a class="close" href="#">&times;</a>
-            <div class="content">
-                Prénom&nbsp;&nbsp;<input type="text">
-                &nbsp;&nbsp;Nom&nbsp;&nbsp;<input type="text">
-            </div>
-            <div class="mail-input">
-                Mail&nbsp;&nbsp;<input type="text">
-            </div>
-            <div class="send">
-                <a class="green-text text-lighten-2" href="#">&nbsp;&nbsp;Envoyer&nbsp;&nbsp;</a>
-            </div>
-        </div>
-    </div>
+    <form action=""></form>
 
     <footer class="page-footer green lighten-2">
         <div class="container">
