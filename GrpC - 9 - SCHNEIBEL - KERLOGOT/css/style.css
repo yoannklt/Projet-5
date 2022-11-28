@@ -1,0 +1,186 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    transition: 300ms;
+    background-color:#e8f5e9;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/*for all paragraphs*/
+p{
+    text-transform: none;
+}
+
+/* for the h1*/
+h1{
+    font-size: 60px;
+}
+
+/* for all h2*/
+h2{
+    font-size: 50px;
+}
+
+/*for navbar*/
+nav{
+    text-transform: uppercase; 
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+nav .brand-logo img{
+    height: 65px;
+}
+
+nav .nav-wrapper .brand-logo{
+    text-transform: none;
+    margin-left: 10px;
+}
+
+.dropdown-content{
+    width: 150px !important;
+    height: 205px !important;
+}
+
+#nav-bar{
+    transition: top 0.3s;
+}
+
+/*for popup contact in navbar*/
+.contact{
+    margin-left: 10px;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target{
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup{
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+  
+.popup h2{
+    margin-top: 0;
+    color: #81c784;
+    font-family: "Poppins", sans-serif;
+}
+
+.popup .close{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #81c784;
+}
+
+.popup .close:hover{
+    color: #2e7d32;
+}
+
+.popup .content{
+    max-height: 30%;
+    overflow: auto;
+}
+  
+@media screen and (max-width: 700px){
+    .popup{
+      width: 70%;
+}
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+}
+
+/*for carousel in index*/
+#projects{
+    scroll-margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.image{
+    max-width:100%;
+}
+
+/*for parallax in projects*/
+#second-parallax{
+    margin-bottom: 15px;
+}
+
+/*for all cards*/
+#us{
+    scroll-margin-top: 60px;
+    margin-top: 30px;
+}
+
+/*for cards in index*/
+.card{
+    border-radius: 5px;
+}
+
+.container .row h2{
+    font-size: 30px;
+    vertical-align: middle;
+}
+
+.container .row h1{
+    vertical-align: middle;
+}
+
+/*for card in the first project*/
+.first-project{
+    background-image: url(../img/overwatch2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+
+/*for card in the second project*/
+.second-project{
+    background-image: url(../img/tic-jeu-sam2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*for card in the third project*/
+.third-project{
+    background-image: url(../img/tic-jeu-sam1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*for easter egg heart chad Antoine <3*/
+#heart{
+    color: red;
+}
+
+#heart-red{
+    display: none;
+}
