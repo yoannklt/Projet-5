@@ -28,9 +28,20 @@
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a class="green-text text-lighten-5" href="#projects">Projets</a></li>
                 <li><a class="ekip green-text text-lighten-5" href="#us">équipe</a></li>
-                <li class="hover"><a class="button green-text text-lighten-5" href="#">Se connecter</a></li>
+                <li class="hover"><a class="button green-text text-lighten-5 modal-trigger" href="#modal3">Se connecter</a></li>
             </ul>
-        </div>
+
+            <!-- Modal Structure -->
+            <div id="modal3" class="modal container">
+                <h2 class="black-text">Connectez-Vous :</h2>
+                <form method="post" action="action/signin.php">
+                    <input type='text' name='user_name' placeholder="Username"/>
+                    <input type='password' name='password' placeholder="Mot de Passe" />
+                    <input type='submit' value='Me connecter' />
+                </form>
+                <p class="black-text">Aucun compte ? <button class=" modal-close"><a href="#modal4" class="blue-text modal-trigger">Créez-en un !</a></button></p>
+            </div>
+        </div>  
     </nav>
 
     <ul id='dropdown1' class='dropdown-content'>
