@@ -23,17 +23,17 @@
 
   <nav id="nav-bar" class="green lighten-2">
     <div class="nav-wrapper">
-      <a href="index.html" class="brand-logo">Portfolio</a>
+      <a href="index.php" class="brand-logo">Portfolio</a>
       <a class='dropdown-trigger sidenav-trigger hide-on-large-only btn transparent waves-effect waves-dark' href='#' data-target='dropdown1'><i class="material-icons">menu</i></a>
     </div>
   </nav>
 
   <ul id='dropdown1' class='dropdown-content'>
-    <li><a href="index.html" class="material-icons center green-text text-darken-1">home</a></li>
+    <li><a href="index.php" class="material-icons center green-text text-darken-1">home</a></li>
     <li class="divider" tabindex="-1"></li>
-    <li><a href="first_project.html" class="green-text text-darken-1">Site Internet</a></li>
-    <li><a href="second_project.html" class="green-text text-darken-1">Jeu Sam</a></li>
-    <li><a href="third_project.html" class="green-text text-darken-1">Jeu Yoann</a></li>
+    <li><a href="first_project.php" class="green-text text-darken-1">Site Internet</a></li>
+    <li><a href="second_project.php" class="green-text text-darken-1">Jeu Sam</a></li>
+    <li><a href="third_project.php" class="green-text text-darken-1">Jeu Yoann</a></li>
   </ul>
 
   <div class="parallax-container">
@@ -77,9 +77,9 @@
   </div>
 
   <ul class="pagination center wow animate__animated animate__backInUp">
-    <li class="waves-effect"><a class="green-text text-lighten-2" href="first_project.html">1</a></li>
-    <li class="active green lighten-2"><a class="green-text text-lighten-5" href="second_project.html">2</a></li>
-    <li class="waves-effect"><a class="green-text text-lighten-2" href="third_project.html">3</a></li>
+    <li class="waves-effect"><a class="green-text text-lighten-2" href="first_project.php">1</a></li>
+    <li class="active green lighten-2"><a class="green-text text-lighten-5" href="second_project.php">2</a></li>
+    <li class="waves-effect"><a class="green-text text-lighten-2" href="third_project.php">3</a></li>
   </ul>
 
   <footer class="page-footer green lighten-2">
