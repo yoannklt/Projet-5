@@ -28,7 +28,7 @@
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a class="green-text text-lighten-5" href="#projects">Projets</a></li>
                 <li><a class="ekip green-text text-lighten-5" href="#us">équipe</a></li>
-                <li class="hover"><a class="button green-text text-lighten-5" href="#popup1">Contact</a></li>
+                <li class="hover"><a class="button green-text text-lighten-5" href="action/signin.php">Se connecter</a></li>
             </ul>
         </div>
     </nav>
@@ -36,9 +36,9 @@
     <ul id='dropdown1' class='dropdown-content'>
         <li><a href="index.php" class="material-icons center green-text text-darken-1">home</a></li>
         <li class="divider" tabindex="-1"></li>
-        <li><a href="first_project.php" class="green-text text-darken-1">Site Internet</a></li>
-        <li><a href="second_project.php" class="green-text text-darken-1">Jeu Sam</a></li>
-        <li><a href="third_project.php" class="green-text text-darken-1">Jeu Yoann</a></li>
+        <li><a href="#projects" class="green-text text-darken-1">Projets</a></li>
+        <li><a href="#us" class="green-text text-darken-1">équipe</a></li>
+        <li><a href="" class="green-text text-darken-1">Se connecter</a></li>
     </ul>
     
     <h1 class="center green-text text-lighten-2 wow animate__animated animate__fadeInDown">Samantha & Yoann</h1>
@@ -119,6 +119,7 @@
               <div class="col l6 s12">
                 <h5 class="green-text text-lighten-5">Retrouvez-nous</h5>
                 <p class="green-text text-lighten-5">Sur Instagram et Twitter mais aussi via nos adresses mail : sschneibel@gaming.tech et ykerlogot@gaming.tech</p>
+                <li><a href=".php" class="green-text text-lighten-5">Nous contacter</a></li>
                 <p class="green-text text-lighten-5">Made with <i id="heart" class="material-icons red-text tiny">favorite</i>&nbsp;in Lyon</p>
               </div>
               <div class="col l4 offset-l2 s12">
