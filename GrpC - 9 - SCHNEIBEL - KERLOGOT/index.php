@@ -112,9 +112,8 @@
     <div id="heart-red" class="center wow animate__animated animate__fadeIn">
         <img src="img/icone-de-coeur-rouge-1.png" alt="Sam&Yoann Portfolio un gros coeur rouge avec à l'intérieur Antoine en gigachad car on les admire lui et ses gros muscles">
     </div>
-    
-    <div class="modal container signup-form" id="modal4">
-        <h2>Créer son compte</h2>
+    <h2>Créer son compte</h2>
+    <div class="container signup-form">
         <form action="action/signup.php" method="post">
             <input type="text" name="first_name" placeholder="Nom"/>
             <input type="text" name="second_name" placeholder="Prénom"/>
@@ -126,41 +125,7 @@
     </div>
     <?php ?>
 
-    <footer class="page-footer green lighten-2">
-        <div class="container">
-          <div class="row">
-              <div class="col l6 s12">
-                <h5 class="green-text text-lighten-5">Retrouvez-nous</h5>
-                <p class="green-text text-lighten-5">Sur Instagram et Twitter mais aussi via nos adresses mail : sschneibel@gaming.tech et ykerlogot@gaming.tech</p>
-                <li><a href="contact.php" class="green-text text-lighten-5">Nous contacter</a></li>
-                <p class="green-text text-lighten-5">Made with <i id="heart" class="material-icons red-text tiny">favorite</i>&nbsp;in Lyon</p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                  <h5 class="green-text text-lighten-5">Nos réseaux sociaux</h5>
-                <ul>
-                  <li>
-                    <h6>
-                        <i class="small material-icons">camera_alt</i>&nbsp;&nbsp;Instagram
-                    </h6>
-                  </li>
-                  <li>
-                    <a class="green-text text-lighten-5" href="https://www.instagram.com/sam_schnbl/" target="_blank">Samantha</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a class="grey-text text-lighten-3" href="https://www.instagram.com/yoann.klt/" target="_blank">Yoann</a>
-                  </li>
-                  <li>
-                    <h6>
-                        <i class="small material-icons">stay_current_portrait</i>&nbsp;&nbsp;Twitter
-                    </h6>
-                  </li>
-                  <li>
-                    <a class="green-text text-lighten-5" href="https://twitter.com/sam_schnbl" target="_blank">Samantha</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a class="grey-text text-lighten-3" href="https://twitter.com/YoyoDesco" target="_blank">Yoann</a>
-                  </li>
-                </ul>
-              </div>
-          </div>
-        </div>
-    </footer>
+    <?php require_once "footer.php" ?>
     
     <!--JavaScript at end of body for optimized loading-->
     <script src="js/jquery.min.js"></script>
