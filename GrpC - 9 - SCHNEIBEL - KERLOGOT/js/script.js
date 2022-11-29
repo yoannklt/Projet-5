@@ -14,7 +14,10 @@ window.onscroll = function() {
 $(document).ready(function(){
     $('.parallax').parallax();
     $('.tabs').tabs();
+    $('.modal').modal();
   });
+
+//initialize modal
 
 //for activate carousel
 $('.first.carousel.carousel-slider').carousel({
@@ -64,3 +67,5 @@ function checkKeyPress(key) {
 
 //wow js initialisation
 new WOW().init();
+
+
