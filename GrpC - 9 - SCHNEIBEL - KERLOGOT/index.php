@@ -37,7 +37,7 @@
                 <form method="post" action="action/signin.php">
                     <input type='text' name='user_name' placeholder="Username"/>
                     <input type='password' name='password' placeholder="Mot de Passe" />
-                    <input type='submit' value='Me connecter' />
+                    <button type="submit">Me Connecter</button>
                 </form>
                 <p class="black-text">Aucun compte ? <button class=" modal-close"><a href="#modal4" class="blue-text modal-trigger">Créez-en un !</a></button></p>
             </div>
@@ -112,8 +112,9 @@
     <div id="heart-red" class="center wow animate__animated animate__fadeIn">
         <img src="img/icone-de-coeur-rouge-1.png" alt="Sam&Yoann Portfolio un gros coeur rouge avec à l'intérieur Antoine en gigachad car on les admire lui et ses gros muscles">
     </div>
-    <h2>Créer son compte</h2>
-    <div class="container signup-form">
+    
+    <div class="modal container signup-form" id="modal4">
+        <h2>Créer son compte</h2>
         <form action="action/signup.php" method="post">
             <input type="text" name="first_name" placeholder="Nom"/>
             <input type="text" name="second_name" placeholder="Prénom"/>
