@@ -28,7 +28,7 @@
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a class="green-text text-lighten-5" href="#projects">Projets</a></li>
                 <li><a class="ekip green-text text-lighten-5" href="#us">équipe</a></li>
-                <li class="hover"><a class="button green-text text-lighten-5" href="action/signin.php">Se connecter</a></li>
+                <li class="hover"><a class="button green-text text-lighten-5" href="#">Se connecter</a></li>
             </ul>
         </div>
     </nav>
