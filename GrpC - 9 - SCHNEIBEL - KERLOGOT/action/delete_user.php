@@ -1,6 +1,6 @@
 <?php 
 require_once "../cfg/config.php"; 
-$sql = "DELETE FROM users WHERE id=":id"";
+$sql = "DELETE FROM users WHERE id=:id";
 $dataBinded=array(
     ':id'   => $_POST['id'],
 
