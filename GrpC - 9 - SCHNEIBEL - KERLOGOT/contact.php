@@ -20,7 +20,7 @@
 </head>
 
 <body>
-
+    <?php require_once "cfg/config.php" ?>
     <?php require_once "components/nav.php" ?>
 
     <h1 class="center wow animate__animated animate__fadeInDown">Pour nous contacter :</h1>
@@ -28,12 +28,12 @@
     <div id="contact-us" class="container">
         <form method="post" action="action/contact.php">
         <p>Qui nous envoie ce mail ?</p>
-        <input type="text" mail="mail" placeholder="exemple@mail.com">
+        <input type="text" name="email" placeholder="exemple@mail.com">
         <p>Quel est l'objet de votre mail ?</p>
-        <input type="text" objet="objet" placeholder="Problème">
+        <input type="text" name="objet" placeholder="Problème">
         <p>Comment pouvons nous vous aider ?</p>
-        <input type="text" content="content" placeholder="Bonjour, j'ai tel problème...">
-        <input type="submit" value="Envoyer">
+        <input type="text" name="content" placeholder="Bonjour, j'ai tel problème...">
+        <button type="submit" class="text-black">Envoyer</button>
         </form>
     </div>
     

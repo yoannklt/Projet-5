@@ -7,7 +7,9 @@
                 <li><a class="ekip green-text text-lighten-5" href="#us">équipe</a></li>
                 <li class="hover"><a class="button green-text text-lighten-5 modal-trigger" href="#modal3">Se connecter</a></li>
             </ul>
-
+            <ul class="hide-on-large-only">
+                <li class="hover "><a class="button green-text text-lighten-5 modal-trigger" href="#modal3">Se connecter</a></li>
+            </ul>
             <!-- Modal Structure -->
             <div id="modal3" class="modal container">
                 <h2 class="black-text">Connectez-Vous :</h2>
@@ -38,5 +40,5 @@
         <li class="divider" tabindex="-1"></li>
         <li><a href="#projects" class="green-text text-darken-1">Projets</a></li>
         <li><a href="#us" class="green-text text-darken-1">équipe</a></li>
-        <li><a href="" class="green-text text-darken-1">Se connecter</a></li>
+        <li><a href="#modal4" class="green-text text-darken-1">Se connecter</a></li>
     </ul>
