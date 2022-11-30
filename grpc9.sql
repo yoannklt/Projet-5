@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Mer 30 Novembre 2022 à 07:50
+-- Généré le :  Mer 30 Novembre 2022 à 08:48
 -- Version du serveur :  5.7.11
 -- Version de PHP :  5.6.18
 
@@ -21,6 +21,41 @@ SET time_zone = "+00:00";
 --
 CREATE DATABASE IF NOT EXISTS `grpc9` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `grpc9`;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `mail`
+--
+
+CREATE TABLE `mail` (
+  `mail_id` int(11) NOT NULL,
+  `email` varchar(20) NOT NULL,
+  `objet` int(15) NOT NULL,
+  `content` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `projects`
+--
+
+CREATE TABLE `projects` (
+  `projects_id` int(11) NOT NULL,
+  `parallax1` varchar(200) NOT NULL,
+  `h1` varchar(30) NOT NULL,
+  `h2_title` varchar(30) NOT NULL,
+  `p1` text NOT NULL,
+  `img_card` varchar(200) NOT NULL,
+  `p_card` text NOT NULL,
+  `parallax2` varchar(200) NOT NULL,
+  `img_game` varchar(200) NOT NULL,
+  `h2_game` varchar(30) NOT NULL,
+  `p2` text NOT NULL,
+  `pagination_href` varchar(30) NOT NULL,
+  `pagination_content` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -55,6 +90,18 @@ INSERT INTO `users` (`user_id`, `user_name`, `password`, `email`, `first_name`, 
 --
 
 --
+-- Index pour la table `mail`
+--
+ALTER TABLE `mail`
+  ADD PRIMARY KEY (`mail_id`);
+
+--
+-- Index pour la table `projects`
+--
+ALTER TABLE `projects`
+  ADD PRIMARY KEY (`projects_id`);
+
+--
 -- Index pour la table `users`
 --
 ALTER TABLE `users`
@@ -64,6 +111,16 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour les tables exportées
 --
 
+--
+-- AUTO_INCREMENT pour la table `mail`
+--
+ALTER TABLE `mail`
+  MODIFY `mail_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT pour la table `projects`
+--
+ALTER TABLE `projects`
+  MODIFY `projects_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT pour la table `users`
 --
