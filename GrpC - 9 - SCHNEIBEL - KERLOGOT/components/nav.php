@@ -6,7 +6,9 @@
                 <li><a class="green-text text-lighten-5" href="#projects">Projets</a></li>
                 <li><a class="ekip green-text text-lighten-5" href="#us">équipe</a></li>
                 <li class="hover"><a class="button green-text text-lighten-5 modal-trigger" href="#modal3">Se connecter</a></li>
+                <li class="hover"><a class="button green-text text-lighten-5 modal-trigger" href="#modal2">Se déconnecter</a></li>
             </ul>
+                    
             <ul class="hide-on-large-only">
                 <li class="hover "><a class="button green-text text-lighten-5 modal-trigger" href="#modal3">Se connecter</a></li>
             </ul>
@@ -30,6 +32,9 @@
                     <input type='password' name='password' placeholder="Mot de Passe" />
                     <button type="submit">Créer mon compte</button>
                 </form>
+            </div>
+            <div>
+
             </div>
         </div>      
     </nav>
