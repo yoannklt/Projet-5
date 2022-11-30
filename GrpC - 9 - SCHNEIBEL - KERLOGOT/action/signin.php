@@ -1,5 +1,15 @@
 <?php 
 require_once "../cfg/config.php"; 
+if(empty($_POST['user_name'])){
+     $_SESSION['error']= "No Username";
+     header('Location: ../index.php');
+     exit();
+}
+if (empty($_POST['password'])){
+     $_SESSION['error']= "No Password";
+     header('Location: ../index.php');
+     exit();
+}
 
 $sql = "SELECT * FROM users WHERE user_name='".$_POST['user_name']."' AND password='".$_POST['password']."'"; 
 $pre = $pdo->prepare($sql); 

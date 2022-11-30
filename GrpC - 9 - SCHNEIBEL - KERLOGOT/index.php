@@ -113,7 +113,7 @@
         <img src="img/icone-de-coeur-rouge-1.png" alt="Sam&Yoann Portfolio un gros coeur rouge avec à l'intérieur Antoine en gigachad car on les admire lui et ses gros muscles">
     </div>
     <h2>Créer son compte</h2>
-    <div class="container signup-form">
+    <div class="modal container signup-form" id="modal4">
         <form action="action/signup.php" method="post">
             <input type="text" name="first_name" placeholder="Nom"/>
             <input type="text" name="second_name" placeholder="Prénom"/>
