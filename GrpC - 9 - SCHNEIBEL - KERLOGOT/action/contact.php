@@ -9,5 +9,5 @@ $dataBinded=array(
 $pre = $pdo->prepare($sql);
 $pre->execute($dataBinded);
 
-//header('Location:../contact.php');
+header('Location:../contact.php');
 ?>
