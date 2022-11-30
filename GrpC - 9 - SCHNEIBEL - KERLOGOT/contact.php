@@ -21,7 +21,7 @@
 
 <body>
 
-    <?php require_once "nav.php" ?>
+    <?php require_once "compenents/nav.php" ?>
 
     <h1 class="center wow animate__animated animate__fadeInDown">Pour nous contacter :</h1>
     
@@ -37,7 +37,7 @@
         </form>
     </div>
 
-    <?php require_once "footer.php" ?>
+    <?php require_once "compenents/footer.php" ?>
 
     <!--JavaScript at end of body for optimized loading-->
     <script src="js/jquery.min.js"></script>
