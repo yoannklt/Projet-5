@@ -47,8 +47,8 @@
     <ul id='dropdown1' class='dropdown-content'>
         <li><a href="index.php" class="material-icons center green-text text-darken-1">home</a></li>
         <li class="divider" tabindex="-1"></li>
-        <li><a href="#projects" class="green-text text-darken-1">Projets</a></li>
-        <li><a href="#us" class="green-text text-darken-1">équipe</a></li>
+        <li><a href="projects.php" class="green-text text-darken-1">Projets</a></li>
+        <li><a href="index.php" class="green-text text-darken-1">équipe</a></li>
         <li><a href="" class="green-text text-darken-1">Se connecter</a></li>
     </ul>
 

@@ -1,6 +1,13 @@
 <?php 
 require_once "../cfg/config.php"; 
 
+//vérifie si l'utilisateur est connecté ou non
+if(isset($_SESSION['user'])){
+     echo "Bonjour ".$_SESSION['user']['first_name'];
+ }else{
+     echo "Vous n'êtes pas connecté";
+ }
+
 $sql = "SELECT * FROM users WHERE user_name='".$_POST['user_name']."' AND password='".$_POST['password']."'"; 
 $pre = $pdo->prepare($sql); 
 $pre->execute();
