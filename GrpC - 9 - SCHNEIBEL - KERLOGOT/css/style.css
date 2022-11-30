@@ -107,6 +107,12 @@ nav .nav-wrapper .brand-logo{
     background-size: cover;
 }
 
+footer{
+    bottom: 0;
+    position: fixed;
+}
+
+
 /*for easter egg heart chad Antoine <3*/
 #heart{
     color: red;

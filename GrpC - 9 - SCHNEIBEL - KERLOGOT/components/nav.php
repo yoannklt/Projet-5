@@ -31,8 +31,7 @@
                     <button type="submit">Créer mon compte</button>
                 </form>
             </div>
-        </div>
-        
+        </div>      
     </nav>
 
     <ul id='dropdown1' class='dropdown-content'>
