@@ -79,7 +79,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>  
 
     <div id="heart-red" class="center wow animate__animated animate__fadeIn">
         <img src="img/icone-de-coeur-rouge-1.png" alt="Sam&Yoann Portfolio un gros coeur rouge avec à l'intérieur Antoine en gigachad car on les admire lui et ses gros muscles">

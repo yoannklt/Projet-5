@@ -12,7 +12,7 @@ if (empty($_POST['password'])){
 }
 
 //vérifie si l'utilisateur est connecté ou non
-if(isset($_SESSION['user'])){
+if(isset($_SESSION['user_name'])){
      echo "Bonjour ".$_SESSION['user']['first_name'];
  }else{
      echo "Vous n'êtes pas connecté";
