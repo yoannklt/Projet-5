@@ -26,8 +26,14 @@
      <p><?php echo $user['user_name']?> <br> <?php echo $user['email']?> <br> <?php echo $user['password']?></p> 
     <form method="post" action ="action/delete_user.php">
         <input type="hidden" name ="id" value="<?php echo $user['user_id']?>">
-        <button type='submit' class="white color black"> 
+        <button type="submit" class="white color black"> 
             delete user
+        </button>
+    </form>
+    <form action="action/admin.php">
+        <input type="hidden" name="id" value="<?php echo $user['user_id']?>">
+        <button type="submit" class="white color black">
+            Donner les droits d'administrateur
         </button>
     </form>
    </div>

@@ -6,8 +6,17 @@
                 <li><a class="green-text text-lighten-5" href="#projects">Projets</a></li>
                 <li><a class="ekip green-text text-lighten-5" href="#us">équipe</a></li>
                 <li><a class="green-text text-lighten-5" href="pannel_admin.php">Pannel Admin</a></li>
-                <li class="hover"><a class="button green-text text-lighten-5 modal-trigger" href="#modal3">Se connecter</a></li>
-                <li class="hover"><a class="button green-text text-lighten-5 modal-trigger" href="#modal2">Se déconnecter</a></li>
+                <li>
+                    <?php if(isset($_SESSION['user_name'])) { ?>
+                        <form action="action/logout.php" method="post"> 
+                            <button type="submit">Se Déconnecter</button>
+                        </form>
+                    <?php }else{ ?>
+                        <a class="modal-trigger" href="#modal3">Se Connecter</a>
+                    
+                </li>
+                
+                <?php } ?>
             </ul>
                     
             <ul class="hide-on-large-only">
