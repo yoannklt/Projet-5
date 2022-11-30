@@ -29,7 +29,7 @@
     <?php
         //vérifie si l'utilisateur est connecté ou non
     if(isset($_SESSION['user_name'])){
-        echo "Bonjour ".$_SESSION['user_name']['first_name'];
+        echo "Bonjour ".$_SESSION['user_name'];
     }else{
         echo "Vous n'êtes pas connecté";
     }
