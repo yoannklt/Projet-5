@@ -21,7 +21,7 @@
 
 <body>
 
-    <?php require_once "nav.php" ?>
+    <?php require_once "compenents/nav.php" ?>
 
     <div class="parallax-container">
         <div class="parallax"><img src="img/programming.jpg" alt="Sam&Yoann Portfolio image de code de programmation"></div>
@@ -69,7 +69,7 @@
         <li class="waves-effect"><a class="green-text text-lighten-2" href="third_project.php">3</a></li>
     </ul>
 
-    <?php require_once "footer.php" ?>
+    <?php require_once "compenents/footer.php" ?>
     
     <!--JavaScript at end of body for optimized loading-->
     <script src="js/jquery.min.js"></script>

@@ -21,7 +21,7 @@
 
 <body>
 
-    <?php require_once "components/nav.php" ?>
+    <?php require_once "compenents/nav.php" ?>
     
     <h1 class="center green-text text-lighten-2 wow animate__animated animate__fadeInDown">Samantha & Yoann</h1>
     <h2 class="center our_projects wow animate__animated animate__fadeInDown">Nos projets</h2>
@@ -85,7 +85,7 @@
         <img src="img/icone-de-coeur-rouge-1.png" alt="Sam&Yoann Portfolio un gros coeur rouge avec à l'intérieur Antoine en gigachad car on les admire lui et ses gros muscles">
     </div>
 
-    <?php require_once "footer.php" ?>
+    <?php require_once "compenents/footer.php" ?>
     
     <!--JavaScript at end of body for optimized loading-->
     <script src="js/jquery.min.js"></script>
