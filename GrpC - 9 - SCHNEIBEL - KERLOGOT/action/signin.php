@@ -11,7 +11,6 @@ if (empty($_POST['password'])){
      exit();
 }
 
-
 $sql = "SELECT * FROM users WHERE user_name='".$_POST['user_name']."' AND password='".$_POST['password']."'"; 
 $pre = $pdo->prepare($sql); 
 $pre->execute();
