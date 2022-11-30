@@ -26,6 +26,7 @@
             <div id="modal3" class="modal container">
                 <h2 class="black-text">Connectez-Vous :</h2>
                 <form method="post" action="action/signin.php">
+                    <input type="hidden" name="id" value="<?php echo $user['user_id']?>">
                     <input type='text' name='user_name' placeholder="Username"/>
                     <input type='password' name='password' placeholder="Mot de Passe" />
                     <button type="submit">Me Connecter</button>

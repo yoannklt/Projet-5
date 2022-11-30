@@ -23,7 +23,7 @@
    <?php
    foreach($data as $user){ ?>
    <div class="bloc_user">
-     <p><?php echo $user['user_name']?> <br> <?php echo $user['email']?> <br> <?php echo $user['password']?></p> 
+     <p><?php echo $user['user_name']?> <br> <?php echo $user['email']?> <br> <?php echo $user['password']?> <br> <?php echo $user['admin'] ?></p> 
     <form method="post" action ="action/delete_user.php">
         <input type="hidden" name ="id" value="<?php echo $user['user_id']?>">
         <button type="submit" class="white color black"> 
