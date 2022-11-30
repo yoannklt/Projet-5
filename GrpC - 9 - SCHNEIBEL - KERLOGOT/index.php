@@ -21,7 +21,7 @@
 
 <body>
 
-    <?php require_once "nav.php" ?>
+    <?php require_once "components/nav.php" ?>
     
     <h1 class="center green-text text-lighten-2 wow animate__animated animate__fadeInDown">Samantha & Yoann</h1>
     <h2 class="center our_projects wow animate__animated animate__fadeInDown">Nos projets</h2>
