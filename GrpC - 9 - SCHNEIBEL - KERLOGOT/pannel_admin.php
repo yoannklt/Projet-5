@@ -31,6 +31,7 @@
         </button>
     </form>
     <form action="action/admin.php">
+        <input type="hidden" name ="admin" value="<?php echo $user['admin']==1?0:1 ?>">
         <input type="hidden" name="id" value="<?php echo $user['user_id']?>">
         <button type="submit" class="white color black">
             Donner les droits d'administrateur
