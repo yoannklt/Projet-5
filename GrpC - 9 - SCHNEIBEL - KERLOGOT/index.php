@@ -21,16 +21,11 @@
 
 <body>
 <?php require_once "nav.php" ?>
-    
+    <?php session_start() ?>
     <h1 class="center green-text text-lighten-2 wow animate__animated animate__fadeInDown">Samantha & Yoann</h1>
     <h2 class="center our_projects wow animate__animated animate__fadeInDown">Nos projets</h2>
 
-    <?php    if(isset($_SESSION['user'])){
-            echo "Bonjour ".$_SESSION['user']['first_name'];
-        }else{
-            echo "Vous n'êtes pas connecté";
-        }
-    ?>
+    
     
     <div id="projects" class="container wow animate__animated animate__fadeIn">
         <div class="first carousel carousel-slider center" style="height: 500px;">
