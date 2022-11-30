@@ -20,13 +20,22 @@
 </head>
 
 <body>
-
+    <?php require_once "cfg/config.php" ?>
     <?php require_once "components/nav.php" ?>
     
     <h1 class="center green-text text-lighten-2 wow animate__animated animate__fadeInDown">Samantha & Yoann</h1>
     <h2 class="center our_projects wow animate__animated animate__fadeInDown">Nos projets</h2>
 
-    
+    <?php
+        //vérifie si l'utilisateur est connecté ou non
+    if(isset($_SESSION['user_name'])){
+        echo "Bonjour ".$_SESSION['user_name']['first_name'];
+        <?php echo> <form action="action/login.php" method="post">
+        <?php>
+    }else{
+        echo "Vous n'êtes pas connecté";
+    }
+    ?>
     
     <div id="projects" class="container wow animate__animated animate__fadeIn">
         <div class="first carousel carousel-slider center" style="height: 500px;">
