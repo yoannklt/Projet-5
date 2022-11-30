@@ -37,18 +37,19 @@
                 <form method="post" action="action/signin.php">
                     <input type='text' name='user_name' placeholder="Username"/>
                     <input type='password' name='password' placeholder="Mot de Passe" />
-                    <input type='submit' value='Me connecter' />
+                    <button type="submit">Me Connecter</button>
                 </form>
                 <p class="black-text">Aucun compte ? <button class=" modal-close"><a href="#modal4" class="blue-text modal-trigger">Créez-en un !</a></button></p>
             </div>
-        </div>  
+        </div>
+        
     </nav>
 
     <ul id='dropdown1' class='dropdown-content'>
         <li><a href="index.php" class="material-icons center green-text text-darken-1">home</a></li>
         <li class="divider" tabindex="-1"></li>
-        <li><a href="projects.php" class="green-text text-darken-1">Projets</a></li>
-        <li><a href="index.php" class="green-text text-darken-1">équipe</a></li>
+        <li><a href="#projects" class="green-text text-darken-1">Projets</a></li>
+        <li><a href="#us" class="green-text text-darken-1">équipe</a></li>
         <li><a href="" class="green-text text-darken-1">Se connecter</a></li>
     </ul>
 
