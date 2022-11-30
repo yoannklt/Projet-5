@@ -5,6 +5,7 @@
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a class="green-text text-lighten-5" href="#projects">Projets</a></li>
                 <li><a class="ekip green-text text-lighten-5" href="#us">équipe</a></li>
+                <li><a class="green-text text-lighten-5" href="pannel_admin.php">Pannel Admin</a></li>
                 <li class="hover"><a class="button green-text text-lighten-5 modal-trigger" href="#modal3">Se connecter</a></li>
             </ul>
             <ul class="hide-on-large-only">
@@ -26,7 +27,7 @@
                     <input type="text" name="first_name" placeholder="Prénom">
                     <input type="text" name="second_name" placeholder="Nom">
                     <input type='text' name='user_name' placeholder="Username"/>
-                    <input type='mail' name='emil' placeholder="exemple@mail.com"/>
+                    <input type='mail' name='email' placeholder="exemple@mail.com"/>
                     <input type='password' name='password' placeholder="Mot de Passe" />
                     <button type="submit">Créer mon compte</button>
                 </form>

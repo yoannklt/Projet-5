@@ -107,11 +107,17 @@ nav .nav-wrapper .brand-logo{
     background-size: cover;
 }
 
+/*footer*/
 footer{
+    width: 100%;
     bottom: 0;
-    position: fixed;
+    position: relative;
 }
 
+/* contact form */
+#contact-us{
+    height: 450px;
+}
 
 /*for easter egg heart chad Antoine <3*/
 #heart{
