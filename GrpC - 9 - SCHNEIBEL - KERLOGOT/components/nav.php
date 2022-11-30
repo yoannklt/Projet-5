@@ -14,14 +14,14 @@
                     <?php }else{ ?>
                         <a class="modal-trigger" href="#modal3">Se Connecter</a>
                     
-                </li>
-                
+                </li>  
                 <?php } ?>
             </ul>
                     
             <ul class="hide-on-large-only">
                 <li class="hover "><a class="button green-text text-lighten-5 modal-trigger" href="#modal3">Se connecter</a></li>
             </ul>
+           
             <!-- Modal Structure -->
             <div id="modal3" class="modal container">
                 <h2 class="black-text">Connectez-Vous :</h2>
@@ -42,9 +42,6 @@
                     <input type='password' name='password' placeholder="Mot de Passe" />
                     <button type="submit">Créer mon compte</button>
                 </form>
-            </div>
-            <div>
-
             </div>
         </div>      
     </nav>
