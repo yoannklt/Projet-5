@@ -30,8 +30,6 @@
         //vérifie si l'utilisateur est connecté ou non
     if(isset($_SESSION['user_name'])){
         echo "Bonjour ".$_SESSION['user_name']['first_name'];
-        <?php echo> <form action="action/login.php" method="post">
-        <?php>
     }else{
         echo "Vous n'êtes pas connecté";
     }
