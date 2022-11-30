@@ -36,7 +36,7 @@
         <input type="submit" value="Envoyer">
         </form>
     </div>
-
+    
     <?php require_once "components/footer.php" ?>
 
     <!--JavaScript at end of body for optimized loading-->
