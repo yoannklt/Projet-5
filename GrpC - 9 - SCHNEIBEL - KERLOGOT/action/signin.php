@@ -1,5 +1,15 @@
 <?php 
 require_once "../cfg/config.php"; 
+if(empty($_POST['user_name'])){
+     $_SESSION['error']= "No Username";
+     header('Location: ../index.php');
+     exit();
+}
+if (empty($_POST['password'])){
+     $_SESSION['error']= "No Password";
+     header('Location: ../index.php');
+     exit();
+}
 
 //vérifie si l'utilisateur est connecté ou non
 if(isset($_SESSION['user'])){
