@@ -37,11 +37,12 @@
                 <form method="post" action="action/signin.php">
                     <input type='text' name='user_name' placeholder="Username"/>
                     <input type='password' name='password' placeholder="Mot de Passe" />
-                    <input type='submit' value='Me connecter' />
+                    <button type="submit">Me Connecter</button>
                 </form>
                 <p class="black-text">Aucun compte ? <button class=" modal-close"><a href="#modal4" class="blue-text modal-trigger">Créez-en un !</a></button></p>
             </div>
-        </div>  
+        </div>
+        
     </nav>
 
     <ul id='dropdown1' class='dropdown-content'>

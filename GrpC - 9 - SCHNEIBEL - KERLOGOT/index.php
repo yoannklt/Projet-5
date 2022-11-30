@@ -1,57 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.css">
-    <link type="text/css" rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <!--Let browser know website is optimized for mobile-->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="img/logo-site.png">
-    <title>Sam&Yoann</title>
-</head>
-
-<body>
-
-    <nav id="nav-bar" class="green lighten-2">
-        <div class="nav-wrapper">
-          <a href="index.php" class="brand-logo">Portfolio</a>
-          <a class='dropdown-trigger sidenav-trigger hide-on-large-only btn waves-effect waves-dark green lighten-2' href='#' data-target='dropdown1'><i class="material-icons">menu</i></a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a class="green-text text-lighten-5" href="#projects">Projets</a></li>
-                <li><a class="ekip green-text text-lighten-5" href="#us">équipe</a></li>
-                <li class="hover"><a class="button green-text text-lighten-5 modal-trigger" href="#modal3">Se connecter</a></li>
-            </ul>
-
-            <!-- Modal Structure -->
-            <div id="modal3" class="modal container">
-                <h2 class="black-text">Connectez-Vous :</h2>
-                <form method="post" action="action/signin.php">
-                    <input type='text' name='user_name' placeholder="Username"/>
-                    <input type='password' name='password' placeholder="Mot de Passe" />
-                    <button type="submit">Me Connecter</button>
-                </form>
-                <p class="black-text">Aucun compte ? <button class=" modal-close"><a href="#modal4" class="blue-text modal-trigger">Créez-en un !</a></button></p>
-            </div>
-        </div>
-        
-    </nav>
-
-    <ul id='dropdown1' class='dropdown-content'>
-        <li><a href="index.php" class="material-icons center green-text text-darken-1">home</a></li>
-        <li class="divider" tabindex="-1"></li>
-        <li><a href="#projects" class="green-text text-darken-1">Projets</a></li>
-        <li><a href="#us" class="green-text text-darken-1">équipe</a></li>
-        <li><a href="" class="green-text text-darken-1">Se connecter</a></li>
-    </ul>
+<?php require_once "nav.php" ?>
     
     <h1 class="center green-text text-lighten-2 wow animate__animated animate__fadeInDown">Samantha & Yoann</h1>
     <h2 class="center our_projects wow animate__animated animate__fadeInDown">Nos projets</h2>
@@ -119,18 +66,6 @@
     <div id="heart-red" class="center wow animate__animated animate__fadeIn">
         <img src="img/icone-de-coeur-rouge-1.png" alt="Sam&Yoann Portfolio un gros coeur rouge avec à l'intérieur Antoine en gigachad car on les admire lui et ses gros muscles">
     </div>
-    <h2>Créer son compte</h2>
-    <div class="modal container signup-form" id="modal4">
-        <form action="action/signup.php" method="post">
-            <input type="text" name="first_name" placeholder="Nom"/>
-            <input type="text" name="second_name" placeholder="Prénom"/>
-            <input type="text" name="user_name" placeholder="User name"/>
-            <input type="email" name="email" placeholder="Mail"/>
-            <input type="password" name="password" placeholder="Mot de Passe"/>
-            <input type='submit' value='Valider'/>
-        </form>
-    </div>
-    <?php ?>
 
     <?php require_once "footer.php" ?>
     
