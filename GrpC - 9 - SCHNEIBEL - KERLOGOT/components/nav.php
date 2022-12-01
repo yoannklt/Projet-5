@@ -34,7 +34,15 @@
             </ul>
                     
             <ul class="hide-on-large-only">
-                <li class="hover "><a class="button green-text text-lighten-5 modal-trigger" href="#modal3">Se connecter</a></li>
+                <?php if(isset($_SESSION['user'])) { ?>
+                    <form action="action/logout.php" method="post">
+                        <button type="submit" > Se Déconnecter</button>
+                    </form>
+                <?php }else{ ?>
+                    <li class="hover "><a class="button green-text text-lighten-5 modal-trigger" href="#modal3">Se connecter</a></li>
+                <?php } ?>
+
+                
             </ul>
            
             <!-- Modal Structure -->
@@ -67,5 +75,8 @@
         <li class="divider" tabindex="-1"></li>
         <li><a href="#projects" class="green-text text-darken-1">Projets</a></li>
         <li><a href="#us" class="green-text text-darken-1">équipe</a></li>
-        <li><a href="#modal4" class="green-text text-darken-1">Se connecter</a></li>
+        <?php 
+        if(isset($_SESSION['user']) && $_SESSION['user']['admin']==1){ ?>
+                <li><a class="hover green-text text-lighten-5" href="pannel_admin.php">Pannel Admin</a></li>
+        <?php } ?> 
     </ul>
