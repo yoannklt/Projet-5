@@ -20,7 +20,7 @@
 </head>
 
 <body>
-
+    <?php require_once "cfg/config.php" ?>
     <?php require_once "components/nav.php" ?>
 
     <div class="parallax-container">

@@ -44,16 +44,18 @@
     <script src="js/materialize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/script.js"></script>
+    <!--Toast error-->
     <script>
         <?php if (isset($_SESSION['error'])) {
             echo "M.toast({html: '".$_SESSION['error']."'})";
             unset($_SESSION['error']);
         } ?>
     </script>
-        <script>
-        <?php if (isset($_SESSION['succes'])) {
-            echo "M.toast({html: '".$_SESSION['succes']."'})";
-            unset($_SESSION['succes']);
+    <!--Toast success-->
+    <script>
+        <?php if (isset($_SESSION['success'])) {
+            echo "M.toast({html: '".$_SESSION['success']."'})";
+            unset($_SESSION['success']);
         } ?>
     </script>
 </body>

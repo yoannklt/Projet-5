@@ -11,5 +11,35 @@ $dataBinded=array(
 $pre = $pdo->prepare($sql);
 $pre->execute($dataBinded);
 
+if(empty($_POST['first_name'])){
+    $_SESSION['error']= "Prénom manquant.";
+    header('Location: ../index.php');
+    exit();
+}
+
+if(empty($_POST['second_name'])){
+    $_SESSION['error']= "Nom manquant";
+    header('Location: ../index.php');
+    exit();
+}
+
+if(empty($_POST['email'])){
+    $_SESSION['error']= "Adresse mail manquante.";
+    header('Location: ../index.php');
+    exit();
+}
+
+if(empty($_POST['password'])){
+    $_SESSION['error']= "Mot de passe manquant.";
+    header('Location: ../index.php');
+    exit();
+}
+
+if(empty($_POST['user_name'])){
+    $_SESSION['error']= "Username manquant.";
+    header('Location: ../index.php');
+    exit();
+}
+
 header('Location:../index.php');//on le redirige sur la page d'accueil du site !
 ?>
