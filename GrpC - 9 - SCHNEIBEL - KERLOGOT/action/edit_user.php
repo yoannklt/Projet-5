@@ -2,8 +2,9 @@
 require_once "../cfg/config.php"; 
 $sql = "UPDATE users SET user_name=:user_name WHERE user_id=:id";
 $dataBinded=array(
+
     ':user_name' => $_POST['user_name'],
-    ':id'   => $_POST['id'],
+    ':id' => $_POST['id'],
 
 );
 $pre = $pdo->prepare($sql);

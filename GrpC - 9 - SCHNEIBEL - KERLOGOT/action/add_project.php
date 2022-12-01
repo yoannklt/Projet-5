@@ -36,6 +36,5 @@ $dataBinded=array(
 $pre = $pdo->prepare($sql);
 $pre->execute($dataBinded);
 
-
 header("Location: ../pannel_admin.php")
 ?>

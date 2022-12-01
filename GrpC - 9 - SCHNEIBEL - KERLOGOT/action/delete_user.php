@@ -2,7 +2,8 @@
 require_once "../cfg/config.php"; 
 $sql = "DELETE FROM users WHERE user_id=:id";
 $dataBinded=array(
-    ':id'   => $_POST['id'],
+
+    ':id' => $_POST['id'],
 
 );
 $pre = $pdo->prepare($sql);

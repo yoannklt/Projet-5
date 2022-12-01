@@ -14,8 +14,6 @@ move_uploaded_file($_FILES['img_card2']['tmp_name'],"../".$destination_img_card2
 $destination_parallax = "img/".$_FILES['parallax']['name']; //dossier "upload"
 move_uploaded_file($_FILES['parallax']['tmp_name'],"../".$destination_parallax);
 
-
-
 $dataBinded=array(
 
     ':h1' => $_POST['h1'],
@@ -28,7 +26,7 @@ $dataBinded=array(
     ':span_card2' => $_POST['span_card2'],
     ':p_card1' => $_POST['p_card1'],
     ':p_card2' => $_POST['p_card2']
-    
+ 
 );
 $pre = $pdo->prepare($sql);
 $pre->execute($dataBinded);
