@@ -7,7 +7,7 @@
                 <li><a class="ekip green-text text-lighten-5" href="#us">équipe</a></li>
                 <li><a class="green-text text-lighten-5" href="pannel_admin.php">Pannel Admin</a></li>
                 <li>
-                    <?php if(isset($_SESSION['user_name'])) { ?>
+                    <?php if(isset($_SESSION['user'])) { ?>
                         <form action="action/logout.php" method="post"> 
                             <button type="submit">Se Déconnecter</button>
                         </form>
@@ -25,8 +25,8 @@
             <!-- Modal Structure -->
             <div id="modal3" class="modal container">
                 <h2 class="black-text">Connectez-Vous :</h2>
+
                 <form method="post" action="action/signin.php">
-                    <input type="hidden" name="id" value="<?php echo $user['user_id']?>">
                     <input type='text' name='user_name' placeholder="Username"/>
                     <input type='password' name='password' placeholder="Mot de Passe" />
                     <button type="submit">Me Connecter</button>

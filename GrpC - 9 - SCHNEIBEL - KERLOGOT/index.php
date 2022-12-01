@@ -28,8 +28,8 @@
 
     <?php
         //vérifie si l'utilisateur est connecté ou non
-    if(isset($_SESSION['$users'])){
-        echo "Bonjour ".$_SESSION['user_name'];
+    if(isset($_SESSION['user'])){
+        echo "Bonjour ".$_SESSION['user']['user_name'];
     }else{
         echo "Vous n'êtes pas connecté";
     }
