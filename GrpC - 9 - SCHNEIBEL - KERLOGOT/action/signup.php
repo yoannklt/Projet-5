@@ -41,6 +41,5 @@ if(empty($_POST['user_name'])){
     exit();
 }
 
-
 header('Location:../index.php');//on le redirige sur la page d'accueil du site !
 ?>

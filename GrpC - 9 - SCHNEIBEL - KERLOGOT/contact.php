@@ -51,9 +51,9 @@
         } ?>
     </script>
         <script>
-        <?php if (isset($_SESSION['succes'])) {
-            echo "M.toast({html: '".$_SESSION['succes']."'})";
-            unset($_SESSION['succes']);
+        <?php if (isset($_SESSION['success'])) {
+            echo "M.toast({html: '".$_SESSION['success']."'})";
+            unset($_SESSION['success']);
         } ?>
     </script>
 </body>

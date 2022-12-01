@@ -25,15 +25,6 @@
     
     <h1 class="center green-text text-lighten-2 wow animate__animated animate__fadeInDown">Samantha & Yoann</h1>
     <h2 class="center our_projects wow animate__animated animate__fadeInDown">Nos projets</h2>
-
-    <?php
-        //vérifie si l'utilisateur est connecté ou non
-    if(isset($_SESSION['user'])){
-        echo "Bonjour ".$_SESSION['user']['user_name'];
-    }else{
-        echo "Vous n'êtes pas connecté";
-    }
-    ?>
     
     <div id="projects" class="container wow animate__animated animate__fadeIn">
         <div class="first carousel carousel-slider center" style="height: 500px;">
@@ -106,9 +97,9 @@
         } ?>
     </script>
         <script>
-        <?php if (isset($_SESSION['succes'])) {
-            echo "M.toast({html: '".$_SESSION['succes']."'})";
-            unset($_SESSION['succes']);
+        <?php if (isset($_SESSION['success'])) {
+            echo "M.toast({html: '".$_SESSION['success']."'})";
+            unset($_SESSION['success']);
         } ?>
     </script>
 </body>
