@@ -11,7 +11,12 @@
     <?php
     $page = "panel-admin";
     require "cfg/config.php";
-    ?>
+    if(isset($_SESSION['user']) && $_SESSION['user']['admin']==1){
+
+    }else{
+        header('Location: index.php');
+        exit();
+    } ?>
     <h2>Liste des utilisateurs</h2>
    <?php
    $sql = "SELECT * FROM users"; 
