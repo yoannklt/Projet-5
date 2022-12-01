@@ -20,10 +20,12 @@
 </head>
 
 <body>
+    <!--requête qui permet d'avoir une seule page projet pour tous les projets-->
     <?php 
     require_once "cfg/config.php"; 
     $sql = "SELECT * FROM projects WHERE projects_id=:id";
     $dataBinded=array(
+
         ':id' => $_GET['id']
 
     );
@@ -31,7 +33,8 @@
     $pre->execute($dataBinded);
     $project = $pre->fetch(PDO::FETCH_ASSOC);
     ?>
-    <?php require_once "cfg/config.php" ?>
+
+    <!--on appelle la navbar en php-->
     <?php require_once "components/nav.php" ?>
 
     <div class="parallax-container">
@@ -76,17 +79,18 @@
 
     <ul class="pagination center wow animate__animated animate__backInUp">
         <?php 
-            $sql = "SELECT * FROM projects"; //votre requêtes SQL (vous savez faire maintenant héhé !)
+            $sql = "SELECT * FROM projects";
             $pre = $pdo->prepare($sql); //on prévient la base de données qu'on va executer une requête
             $pre->execute();//on l'execute
-            $data = $pre->fetchAll(PDO::FETCH_ASSOC);// on stocke les données dans une variable (ici $data)
+            $data = $pre->fetchAll(PDO::FETCH_ASSOC);//on stocke les données dans une variable (ici $data)
             $i = 1;
             foreach ($data as $projets){ ?>
                 <li class="waves-effect"><a class="green-text text-lighten-2" href="projects.php?id=<?php echo $projets['projects_id'] ?>"><?php echo $i ?></a></li>
                 <?php $i++ ?>
         <?php } ?>
     </ul>
-
+    
+    <!--on appelle le footer en php-->
     <?php require_once "components/footer.php" ?>
     
     <!--JavaScript at end of body for optimized loading-->

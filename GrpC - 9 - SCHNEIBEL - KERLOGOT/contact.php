@@ -20,6 +20,7 @@
 </head>
 
 <body>
+    <!--on link la bdd et on demarre la session utilisateur puis on appelle la navbar en php-->
     <?php require_once "cfg/config.php" ?>
     <?php require_once "components/nav.php";
     $sql = "SELECT * FROM contact";
@@ -29,7 +30,8 @@
     ?>
 
     <h1 class="center wow animate__animated animate__fadeInDown"><?php echo $contact['h1'] ?></h1>
-    
+
+    <!--formulaire de contact-->
     <div id="contact-us" class="container">
         <form method="post" action="action/contact.php">
         <p><?php echo $contact['p1'] ?></p>
@@ -41,7 +43,8 @@
         <button type="submit" class="text-black"><?php echo $contact['button'] ?></button>
         </form>
     </div>
-    
+
+    <!--on appelle le footer en php-->
     <?php require_once "components/footer.php" ?>
 
     <!--JavaScript at end of body for optimized loading-->

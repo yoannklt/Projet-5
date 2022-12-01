@@ -1,7 +1,10 @@
 <?php
-require_once "../cfg/config.php"; 
+//pour démarrer la session
+require_once "../cfg/config.php";
+//pour modifier la page d'accueil
 $sql = "UPDATE homepage SET h1=:h1 ,h2=:h2 ,button=:button, parallax=:parallax, img_card1=:img_card1 ,img_card2=:img_card2 ,span_card1=:span_card1 ,span_card2=:span_card2 ,p_card1=:p_card1 ,p_card2=:p_card2";
 
+//on stock l'image dans un fichire temporaire
 $destination_parallax = "img/".$_FILES['parallax']['name']; //dossier "upload"
 move_uploaded_file($_FILES['parallax']['tmp_name'],"../".$destination_parallax);
 
@@ -14,6 +17,7 @@ move_uploaded_file($_FILES['img_card2']['tmp_name'],"../".$destination_img_card2
 $destination_parallax = "img/".$_FILES['parallax']['name']; //dossier "upload"
 move_uploaded_file($_FILES['parallax']['tmp_name'],"../".$destination_parallax);
 
+//pour modifier la page d'accueil
 $dataBinded=array(
 
     ':h1' => $_POST['h1'],
@@ -31,5 +35,5 @@ $dataBinded=array(
 $pre = $pdo->prepare($sql);
 $pre->execute($dataBinded);
 
-header('Location:../pannel_admin.php');//on le redirige sur la page d'accueil du site !
+header('Location:../pannel_admin.php');//on redirige sur la page du panel admin
 ?>

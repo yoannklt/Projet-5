@@ -1,7 +1,9 @@
 <?php
+//pour démarrer la session
 require_once "../cfg/config.php"; 
 $sql = "INSERT INTO projects( parallax1, h1, h2_title, p1, img_card, p_card, parallax2, img_game, h2_game, p2, img) VALUES(:parallax1, :h1, :h2_title, :p1, :img_card, :p_card, :parallax2, :img_game, :h2_game, :p2, :img)";
 
+//on stock l'image dans un fichire temporaire
 $destination_img = "img/".$_FILES['img']['name']; //dossier "upload"
 move_uploaded_file($_FILES['img']['tmp_name'],"../".$destination_img);
 
@@ -17,6 +19,7 @@ move_uploaded_file($_FILES['parallax2']['tmp_name'],"../".$destination_parallax2
 $destination_img_game = "img/".$_FILES['img_game']['name']; //dossier "upload"
 move_uploaded_file($_FILES['img_game']['tmp_name'],"../".$destination_img_game);
 
+//pour ajouter un projet
 $dataBinded=array(
     
     ':parallax1' => $destination_parallax1,
@@ -36,5 +39,5 @@ $dataBinded=array(
 $pre = $pdo->prepare($sql);
 $pre->execute($dataBinded);
 
-header("Location: ../pannel_admin.php")
+header("Location: ../pannel_admin.php") //on redirige sur la page du panel admin
 ?>

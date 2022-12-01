@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Jeu 01 Décembre 2022 à 21:26
+-- Généré le :  Jeu 01 Décembre 2022 à 21:53
 -- Version du serveur :  5.7.11
 -- Version de PHP :  5.6.18
 
@@ -77,7 +77,7 @@ INSERT INTO `homepage` (`h1`, `h2`, `button`, `parallax`, `img_card1`, `img_card
 
 CREATE TABLE `mail` (
   `mail_id` int(11) NOT NULL,
-  `email` varchar(20) NOT NULL,
+  `email` varchar(50) NOT NULL,
   `objet` varchar(20) NOT NULL,
   `content` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

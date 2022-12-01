@@ -1,8 +1,9 @@
-<?php 
+<?php
+//pour démarrer la session
 require_once "../cfg/config.php";
-
-$_SESSION['success']= "Vous êtes déconnecté.";
+//pour qu'un utilisateur se déconnecte
+$_SESSION['success']= "Vous êtes déconnecté."; //succes utilisateur déconnecté
 unset($_SESSION['user']);
 
-header('Location:../index.php');
+header('Location:../index.php'); //on redirige sur la page d'accueil
 ?>

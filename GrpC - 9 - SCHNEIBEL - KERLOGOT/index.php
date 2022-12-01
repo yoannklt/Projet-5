@@ -20,6 +20,7 @@
 </head>
 
 <body>
+    <!--on link la bdd et on demarre la session utilisateur puis on appelle la navbar en php-->
     <?php require_once "cfg/config.php" ?>
     <?php require_once "components/nav.php";
     $sql = "SELECT * FROM homepage";
@@ -34,11 +35,11 @@
     <div id="projects" class="container wow animate__animated animate__fadeIn">
         <div class="first carousel carousel-slider center" style="height: 500px;">
         <?php 
-        $sql = "SELECT * FROM projects"; //votre requêtes SQL (vous savez faire maintenant héhé !)
+        $sql = "SELECT * FROM projects";
         $pre = $pdo->prepare($sql); //on prévient la base de données qu'on va executer une requête
         $pre->execute();//on l'execute
-        $data = $pre->fetchAll(PDO::FETCH_ASSOC);// on stocke les données dans une variable (ici $data)
-            foreach ($data as $projet){ ?>
+        $data = $pre->fetchAll(PDO::FETCH_ASSOC);//on stocke les données dans une variable (ici $data)
+            foreach ($data as $projet){ ?> <!--pour chaque projet on ajoute une slide au carousel-->
                 <div class="carousel-item">
                     <img src="<?php echo $projet['img'] ?>" alt="">
                     <div class="carousel-fixed-item center">
@@ -46,8 +47,7 @@
                         class="btn waves-effect green lighten-2 "><?php echo $homepage['button'] ?></a>
                     </div>   
                 </div>
-            <?php } ?>
-            
+            <?php } ?>            
         </div>
     </div>
     
@@ -85,7 +85,8 @@
     <div id="heart-red" class="center wow animate__animated animate__fadeIn">
         <img src="img/icone-de-coeur-rouge-1.png" alt="Sam&Yoann Portfolio un gros coeur rouge avec à l'intérieur Antoine en gigachad car on les admire lui et ses gros muscles">
     </div>
-
+    
+    <!--on appelle le footer en php-->
     <?php require_once "components/footer.php" ?>
     
     <!--JavaScript at end of body for optimized loading-->

@@ -1,7 +1,10 @@
-<?php 
-require_once "../cfg/config.php"; 
+<?php
+//pour démarrer la session
+require_once "../cfg/config.php";
+//pour modifier un projet
 $sql = "UPDATE projects SET parallax1=:parallax1  ,h1=:h1   ,h2_title=:h2_title   ,p1=:p1    ,img_card=:img_card    ,p_card=:p_card    ,parallax2=:parallax2     ,img_game=:img_game   ,h2_game=:h2_game     ,p2=:p2     ,img=:img WHERE projects_id=:projects_id";
 
+//on stock l'image dans un fichire temporaire
 $destination_img = "img/".$_FILES['img']['name']; //dossier "upload"
 move_uploaded_file($_FILES['img']['tmp_name'],"../".$destination_img);
 
@@ -16,7 +19,8 @@ move_uploaded_file($_FILES['parallax2']['tmp_name'],"../".$destination_parallax2
 
 $destination_img_game = "img/".$_FILES['img_game']['name']; //dossier "upload"
 move_uploaded_file($_FILES['img_game']['tmp_name'],"../".$destination_img_game);
-        
+
+//pour modifier un projet
 $dataBinded=array(
     
     ':parallax1' => $destination_parallax1,
@@ -36,5 +40,5 @@ $dataBinded=array(
 $pre = $pdo->prepare($sql);
 $pre->execute($dataBinded);
 
-header('Location:../pannel_admin.php');//on le redirige sur la page d'accueil du site !
+header('Location:../pannel_admin.php');//on redirige sur la page du panel admin
 ?>

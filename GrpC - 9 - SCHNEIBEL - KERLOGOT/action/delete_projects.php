@@ -1,5 +1,7 @@
-<?php 
-require_once "../cfg/config.php"; 
+<?php
+//pour démarrer la session
+require_once "../cfg/config.php";
+//pour supprimer un projet
 $sql = "DELETE FROM projects WHERE projects_id=:projects_id";
 $dataBinded=array(
 
@@ -9,5 +11,5 @@ $dataBinded=array(
 $pre = $pdo->prepare($sql);
 $pre->execute($dataBinded);
 
-header('Location:../pannel_admin.php');//on le redirige sur la page admin du site !
+header('Location:../pannel_admin.php'); //on redirige sur la page du panel admin
 ?>

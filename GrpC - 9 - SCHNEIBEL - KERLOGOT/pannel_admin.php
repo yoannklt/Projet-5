@@ -9,6 +9,7 @@
 
 <body>
 
+    <!--un utilisateur admin à accès au panel admin les autres non-->
     <h1>Hello Admin </h1>
     <?php
     $page = "panel-admin";
@@ -20,6 +21,7 @@
         exit();
     } ?>
 
+    <!--liste tous les renseignements des utilisateurs inscris-->
     <h2>Liste des utilisateurs</h2>
     <?php
     $sql = "SELECT * FROM users"; 
@@ -27,17 +29,19 @@
     $pre->execute();
     $data = $pre->fetchAll(PDO::FETCH_ASSOC);
     ?>
-   
+
     <?php
     foreach($data as $user){ ?>
     <div class="bloc_user">
-        <p><?php echo $user['user_name']?> <br> <?php echo $user['email']?> <br> <?php echo $user['password']?> <br> <?php echo $user['admin'] ?></p> 
+        <p><?php echo $user['user_name']?> <br> <?php echo $user['email']?> <br> <?php echo $user['password']?> <br> <?php echo $user['admin'] ?></p>
+    <!--pour supprimer un utilisateur-->
     <form method="post" action ="action/delete_user.php">
         <input type="hidden" name ="id" value="<?php echo $user['user_id']?>">
         <button type="submit" class="white color black"> 
             delete user
         </button>
     </form>
+    <!--pour donner les droits d'admin à un utilisateur-->
     <form method="post" action="action/admin.php">
         <input type="hidden" name ="admin" value="<?php echo $user['admin']==1?0:1 ?>">
         <input type="hidden" name="id" value="<?php echo $user['user_id']?>">
@@ -45,6 +49,7 @@
             Donner les droits d'administrateur
         </button>
     </form>
+    <!--pour modifier le username d'un utilisateur-->
     <form method="post" action="action/edit_user.php">
         <input type="hidden" name="id" value="<?php echo $user['user_id']?>">
         <input type="text" name="user_name" placeholder="Nouveau Pseudo">
@@ -54,6 +59,8 @@
     </form>
     </div>
     <?php } ?>
+
+    <!--pour créer et/ou ajouter un nouveau projet-->
     <h2>Créer/Ajouter un projet</h2>
     <?php
     $sql = "SELECT * FROM projects"; 
@@ -61,7 +68,7 @@
     $pre->execute();
     $data = $pre->fetchAll(PDO::FETCH_ASSOC);
     ?>
-   
+    
     <div class="bloc_projects">
     <form action="action/add_project.php" method="post" enctype="multipart/form-data">
         <label>Premier Parallax</label>
@@ -99,6 +106,7 @@
         <button type="submit" class="white color black"> Créer le Projet </button>
     </form>
 
+    <!--liste toutes les informations d'un projet-->
     <h2>Liste de tous les projets</h2>
     <?php
     $sql = "SELECT * FROM projects"; 
@@ -110,6 +118,7 @@
     <?php 
     foreach($data as $projects){ ?>
     <div class="bloc_projects">
+    <!--pour modifier un projet-->
     <form action="action/edit_projects.php" method="post" enctype="multipart/form-data">
         <h2><?php echo $projects['h1']?> <br></h2>
         <input type="hidden" name="projects_id" value="<?php echo $projects['projects_id'] ?>">
@@ -147,6 +156,7 @@
         <input type="file" name="img">
         <button type="submit" class="white color black"> Confirmer les modifications </button>
     </form>
+    <!--pour supprimer un projet-->
     <form action="action/delete_projects.php" method="post">
         <input type="hidden" name="projects_id" value="<?php echo $projects['projects_id'] ?>">
         <button type="submit">Supprimer le Projet</button>
@@ -154,6 +164,7 @@
     </div>
     <?php } ?>
 
+    <!--liste toutes les informations de la page d'accueil-->
     <?php
     $sql = "SELECT * FROM homepage"; 
     $pre = $pdo->prepare($sql); 
@@ -165,6 +176,7 @@
     <?php 
     foreach($data as $homepage){ ?>
     <div class="bloc_homepage">
+    <!--pour modifier la page d'accueil-->
     <form action="action/edit_index.php" method="post" enctype="multipart/form-data">
         <h2><?php echo $homepage['h1']?> <br></h2>
         <label>Titre du site</label>
@@ -201,6 +213,7 @@
     </form>
     <?php } ?>
 
+    <!--liste toutes les informations de la page de contact-->
     <?php
     $sql = "SELECT * FROM contact"; 
     $pre = $pdo->prepare($sql); 
@@ -212,6 +225,7 @@
     <?php 
     foreach($data as $contact){ ?>
     <div class="bloc_contact">
+    <!--pour modifier la page de contact-->
     <form action="action/edit_contact.php" method="post" enctype="multipart/form-data">
         <h2><?php echo $contact['h1']?> <br></h2>
         <label>Titre de la page</label>
@@ -234,6 +248,7 @@
     </div>
     <?php } ?>
 
+    <!--pour retourner sur la page d'accueil-->
     <li class="green-text text-lighten-5">
         <a class="green-text text-lighten-5" href="index.php">Retour à l'index</a>
     </li>
