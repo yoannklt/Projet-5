@@ -64,8 +64,7 @@
     </div>
 
     <ul class="pagination center wow animate__animated animate__backInUp">
-        <li class="active green lighten-2"><a class="green-text text-lighten-5" href="first_project.php">1</a></li>
-        <li class="waves-effect"><a class="green-text text-lighten-2" href="second_project.php">2</a></li>
+        
         <li class="waves-effect"><a class="green-text text-lighten-2" href="third_project.php">3</a></li>
     </ul>
 
