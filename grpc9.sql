@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Mer 30 Novembre 2022 à 08:48
+-- Généré le :  Jeu 01 Décembre 2022 à 08:07
 -- Version du serveur :  5.7.11
 -- Version de PHP :  5.6.18
 
@@ -31,7 +31,7 @@ USE `grpc9`;
 CREATE TABLE `mail` (
   `mail_id` int(11) NOT NULL,
   `email` varchar(20) NOT NULL,
-  `objet` int(15) NOT NULL,
+  `objet` varchar(20) NOT NULL,
   `content` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
