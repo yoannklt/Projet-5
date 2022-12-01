@@ -1,7 +1,7 @@
 <?php 
 require_once "../cfg/config.php"; 
 
-if(empty($_POST['user_name'])){
+/*if(empty($_POST['user_name'])){
      $_SESSION['error']= "No Username";
      header('Location: ../index.php');
      exit();
@@ -11,10 +11,13 @@ if (empty($_POST['password'])){
      header('Location: ../index.php');
      exit();
 }
-
-$sql = "SELECT * FROM user WHERE user_name='".$_POST['user_name']."' AND password='".$_POST['password']."'"; 
+*/
+$sql = "SELECT * FROM users WHERE user_name=:user_name AND password=SHA1(:password)"; 
 $pre = $pdo->prepare($sql); 
-$pre->execute();
+$pre->execute(array(
+     ":user_name" => $_POST['user_name'],
+     ':password' => "olzehgpfrKZVU34597932245KFee1gf545ù*^$74".$_POST['password']
+));
 $user = $pre->fetch(PDO::FETCH_ASSOC);
 if(empty($user)){ //vérifie si le resultat est vide !
      //non connecté
