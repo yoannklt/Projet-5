@@ -62,8 +62,9 @@
    <?php 
    foreach($data as $projects){ ?>
    <div class="bloc_projects">
-    <form action="action/add_projects" method="post" enctype="multipart/form-data">
+    <form action="action/edit_projects.php" method="post" enctype="multipart/form-data">
         <h2><?php echo $projects['h1']?> <br></h2>
+        <input type="hidden" name="projects_id" value="<?php echo $projects['projects_id'] ?>">
         <label>Premier Parallax</label>
         <input type="file" name="parallax1">
         <br>
@@ -92,10 +93,11 @@
         <input type="text" name="h2_game">
         <br>
         <label >Seconde Description</label>
-        <input type="text" name="h1">
+        <input type="text" name="p2">
         <br>
         <label >Image sur Carousel</label>
         <input type="file" name="img">
+        <button type="submit" class="white color black"> Confirmer les modifications </button>
     </form>
     <form action="action/delete_projects.php">
         <input type="hidden" name="projects_id" value="<?php echo $projects['projects_id'] ?>">
