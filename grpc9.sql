@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Jeu 01 Décembre 2022 à 19:15
+-- Généré le :  Jeu 01 Décembre 2022 à 21:26
 -- Version du serveur :  5.7.11
 -- Version de PHP :  5.6.18
 
@@ -41,7 +41,7 @@ CREATE TABLE `contact` (
 --
 
 INSERT INTO `contact` (`h1`, `p1`, `p2`, `p3`, `button`) VALUES
-('uwu', 'oui', 'oui', 'uoi', 'uoi');
+('Pour nous contacter :', 'Qui souhaite nous contacter ?', 'Pourquoi voulez vous nous contacter ?', 'Comment pouvons nous vous aider ?', 'Envoyer');
 
 -- --------------------------------------------------------
 
@@ -52,7 +52,6 @@ INSERT INTO `contact` (`h1`, `p1`, `p2`, `p3`, `button`) VALUES
 CREATE TABLE `homepage` (
   `h1` varchar(50) NOT NULL,
   `h2` varchar(50) NOT NULL,
-  `img_projet` varchar(200) NOT NULL,
   `button` varchar(50) NOT NULL,
   `parallax` varchar(200) NOT NULL,
   `img_card1` varchar(200) NOT NULL,
@@ -67,8 +66,8 @@ CREATE TABLE `homepage` (
 -- Contenu de la table `homepage`
 --
 
-INSERT INTO `homepage` (`h1`, `h2`, `img_projet`, `button`, `parallax`, `img_card1`, `img_card2`, `span_card1`, `span_card2`, `p_card1`, `p_card2`) VALUES
-('', '', '', '', 'img/667.png', 'img/', 'img/', '', '', '', '');
+INSERT INTO `homepage` (`h1`, `h2`, `button`, `parallax`, `img_card1`, `img_card2`, `span_card1`, `span_card2`, `p_card1`, `p_card2`) VALUES
+('Samantha & Yoann', 'Nos Projets', 'Voir Plus', 'img/yoann-sam.jpg', 'img/sam-gang.jpg', 'img/yoan.png', 'Samantha', 'Yoann', 'Salut, moi c\'est ZanZam', 'Salut, moi c\'est Yoyo le desco');
 
 -- --------------------------------------------------------
 
@@ -88,37 +87,7 @@ CREATE TABLE `mail` (
 --
 
 INSERT INTO `mail` (`mail_id`, `email`, `objet`, `content`) VALUES
-(1, '', '', 'j\'ai un pbl avec mon caca'),
-(2, 'exemple@mail.com', 'caca', 'j\'ai un pbl avec mon caca'),
-(3, 'exemple@mail.com', 'hgvhvj', 'jkjj'),
-(4, 'exemple@mail.com', 'hgvhvj', 'jkjj'),
-(5, 'exemple@mail.com', 'hgvhvj', ''),
-(6, '', '', ''),
-(7, 'exemple@mail.com', 'hgvhvj', 'jkjj'),
-(8, 'exemple@mail.com', 'hgvhvj', 'jkjj'),
-(9, '', '', ''),
-(10, '', '', ''),
-(11, '', '', ''),
-(12, 'exemple@mail.com', 'hgvhvj', 'jkjj'),
-(13, '', 'hgvhvj', 'jkjj'),
-(14, '', '', ''),
-(15, '', '', ''),
-(16, '', '', ''),
-(17, '', '', ''),
-(18, 'gfddfgdfg', '', ''),
-(19, 'gfdfdgfgd', 'fdgdgfd', ''),
-(20, 'exemple@mail.com', 'caca', 'j\'ai un pbl avec mon caca'),
-(21, 'gfddfgdfg', 'caca', 'j\'ai un pbl avec mon caca'),
-(22, 'exemple@mail.com', 'hgvhvj', 'jkjj'),
-(23, 'gfdfdgfgd', 'hgvhvj', 'j\'ai un pbl avec mon caca'),
-(24, '', 'fdgdgfd', 'j\'ai un pbl avec mon caca'),
-(25, 'gfddfgdfg', 'caca', 'j\'ai un pbl avec mon caca'),
-(26, '', 'jhgjhg', 'jgjghjg'),
-(27, 'exemple@mail.com', 'caca', 'j\'ai un pbl avec mon caca'),
-(28, 'gfddfgdfg', '', 'jgjghjg'),
-(29, 'gfddfgdfg', 'caca', 'j\'ai un pbl avec mon caca'),
-(30, 'gfddfgdfg', '', 'jkjj'),
-(31, 'exemple@mail.com', 'caca', '');
+(32, 'samantha@mail.com', 'Bonjour', 'Je suis ravie de vous rencontrer');
 
 -- --------------------------------------------------------
 
@@ -138,9 +107,17 @@ CREATE TABLE `projects` (
   `img_game` varchar(200) NOT NULL,
   `h2_game` varchar(50) NOT NULL,
   `p2` text NOT NULL,
-  `pagination_href` varchar(50) NOT NULL,
-  `pagination_content` int(11) NOT NULL
+  `img` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `projects`
+--
+
+INSERT INTO `projects` (`projects_id`, `parallax1`, `h1`, `h2_title`, `p1`, `img_card`, `p_card`, `parallax2`, `img_game`, `h2_game`, `p2`, `img`) VALUES
+(1, 'img/programming.jpg', 'PROJET HTML & CSS', 'CRÉATION D\'UN SITE INTERNET SUR OVERWATCH', 'Ce projet est le premier de notre scolarité en tant qu\'élève GTech du Gaming Campus. Le but du projet était de réaliser un site internet de notre jeu vidéo préféré en utilisant les premiers langages de codage de page web : le HTML et le CSS. Venant de sortir, la suite du premier opus nous à redonner envie de jouer à celui-ci c\'est donc naturellement que nous avons choisis Overwatch 2. Le site était assez simple à créer mais les points ont surtout été perdu sur l\'optimisation. Nous avons beaucoup appris sur ces deux langages de programmation et même si le site est loin d\'être parfait on s\'est bien amusé et il nous tiens a coeur car c\'est le premier projet qu\'on à réalisé et on en était plutôt fièrs !', 'img/site-overwatch.png', 'Projet réalisé en coopération par Samantha et Yoann.', 'img/image-jeu-video-random.jpg', 'img/overwatch-team.jpg', 'SITE INTERNET SUR LE THÈME D\'OVERWATCH', 'Le site était censé être sur Zelda Breath of the Wild mais la sortie récente d\'Overwatch 2 nous a influencé dans sa création. Nous sommes fiers du rendu qui est propre et épuré.', 'img/overwatch2.png'),
+(2, 'img/video-game-1.jpg', 'PROJET TIC-80 EN LUA', 'CRÉATION D\'UN JEU SUR TIC-80', 'Ce projet à démarré dans le cadre du bootcamp organisé par David Merkesa, du mardi et mercredi 4 et 5 octobre 2022. Lors de ce bootcamp, l\'intervenant est venu présenter le logiciel Tic-80, une simulation de console qui sert à créer des petits jeux vidéos. En effet, la finalité a été de commencer à réaliser jeu vidéo en lua. Mon concept est que nous sommes un petit cheval qui saute par dessus des obstacles. Le jeu n\'est pas du tout fini, les collisions ne sont pas faites mais ce bootcamp reste une exprérience très enrichissante.', 'img/logo-tic80.png', 'Projet réalisé par Samantha.', 'img/game-room.jpg', 'img/dino-game.png', 'INSPIRÉ DU JEU DU DINOSAURE DE GOOGLE', 'Je suis partie sur un remake du dinosaure de Google. Mais aussi, lorsque j\'étais en 4ème j\'avais créer un jeu sur scratch du même concept donc on peut dire que c\'est sa version améliorée.', 'img/tic-jeu-sam2.png'),
+(3, 'img/video-game.jpg', 'PROJET TIC-80 EN LUA', 'CRÉATION D\'UN JEU SUR TIC-80', 'Ce projet à démarré dans le cadre du bootcamp organisé par David Merkesa, du mardi et mercredi 4 et 5 octobre 2022. Lors de ce bootcamp, l\'intervenant est venu présenter le logiciel Tic-80, une simulation de console qui sert à créer des petits jeux vidéos. En effet, la finalité a été de commencer à réaliser jeu vidéo en lua. La difficulté à été de programmer les ennemies à ce qu\'ils tirent des projectiles, qu\'ils soient indépendants et de faire des collisions entres les différents sprites.', 'img/logo-tic80.png', 'Projet réalisé par Yoann.', 'img/video-game-3.jpg', 'img/space-invader.jpg', ' INSPIRÉ DE SPACE INVADER', 'En effet le but était de créer un jeu simple, je suis donc parti sur un type de jeu d\'arcade avec peu d\'élément et un gameplay attractif.', 'img/tic-jeu-sam1.png');
 
 -- --------------------------------------------------------
 
@@ -195,12 +172,12 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour la table `mail`
 --
 ALTER TABLE `mail`
-  MODIFY `mail_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `mail_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 --
 -- AUTO_INCREMENT pour la table `projects`
 --
 ALTER TABLE `projects`
-  MODIFY `projects_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `projects_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT pour la table `users`
 --

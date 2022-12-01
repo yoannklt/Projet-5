@@ -199,7 +199,6 @@
         <br>
         <button type="submit">Confirmer les modifications </button>
     </form>
-
     <?php } ?>
 
     <?php
@@ -233,7 +232,6 @@
         <button type="submit">Confirmer les modifications </button>
     </form>
     </div>
-
     <?php } ?>
 
     <li class="green-text text-lighten-5">
