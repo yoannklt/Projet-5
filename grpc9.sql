@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Jeu 01 Décembre 2022 à 10:33
+-- Généré le :  Jeu 01 Décembre 2022 à 19:15
 -- Version du serveur :  5.7.11
 -- Version de PHP :  5.6.18
 
@@ -29,24 +29,31 @@ USE `grpc9`;
 --
 
 CREATE TABLE `contact` (
-  `h1` int(11) NOT NULL,
+  `h1` varchar(50) NOT NULL,
   `p1` varchar(50) NOT NULL,
   `p2` varchar(50) NOT NULL,
   `p3` varchar(50) NOT NULL,
-  `boutton` varchar(50) NOT NULL
+  `button` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `contact`
+--
+
+INSERT INTO `contact` (`h1`, `p1`, `p2`, `p3`, `button`) VALUES
+('uwu', 'oui', 'oui', 'uoi', 'uoi');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `index`
+-- Structure de la table `homepage`
 --
 
-CREATE TABLE `index` (
+CREATE TABLE `homepage` (
   `h1` varchar(50) NOT NULL,
   `h2` varchar(50) NOT NULL,
   `img_projet` varchar(200) NOT NULL,
-  `boutton` varchar(50) NOT NULL,
+  `button` varchar(50) NOT NULL,
   `parallax` varchar(200) NOT NULL,
   `img_card1` varchar(200) NOT NULL,
   `img_card2` varchar(200) NOT NULL,
@@ -55,6 +62,13 @@ CREATE TABLE `index` (
   `p_card1` text NOT NULL,
   `p_card2` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `homepage`
+--
+
+INSERT INTO `homepage` (`h1`, `h2`, `img_projet`, `button`, `parallax`, `img_card1`, `img_card2`, `span_card1`, `span_card2`, `p_card1`, `p_card2`) VALUES
+('', '', '', '', 'img/667.png', 'img/', 'img/', '', '', '', '');
 
 -- --------------------------------------------------------
 
