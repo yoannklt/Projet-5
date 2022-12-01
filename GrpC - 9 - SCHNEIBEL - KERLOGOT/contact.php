@@ -21,19 +21,24 @@
 
 <body>
     <?php require_once "cfg/config.php" ?>
-    <?php require_once "components/nav.php" ?>
+    <?php require_once "components/nav.php";
+    $sql = "SELECT * FROM contact";
+    $pre = $pdo->prepare($sql); 
+    $pre->execute();
+    $contact = $pre->fetch(PDO::FETCH_ASSOC);
+    ?>
 
-    <h1 class="center wow animate__animated animate__fadeInDown">Pour nous contacter :</h1>
+    <h1 class="center wow animate__animated animate__fadeInDown"><?php echo $contact['h1'] ?></h1>
     
     <div id="contact-us" class="container">
         <form method="post" action="action/contact.php">
-        <p>Qui nous envoie ce mail ?</p>
+        <p><?php echo $contact['p1'] ?></p>
         <input type="text" name="email" placeholder="exemple@mail.com">
-        <p>Quel est l'objet de votre mail ?</p>
+        <p><?php echo $contact['p2'] ?></p>
         <input type="text" name="objet" placeholder="Problème">
-        <p>Comment pouvons nous vous aider ?</p>
+        <p><?php echo $contact['p3'] ?></p>
         <input type="text" name="content" placeholder="Bonjour, j'ai tel problème...">
-        <button type="submit" class="text-black">Envoyer</button>
+        <button type="submit" class="text-black"><?php echo $contact['button'] ?></button>
         </form>
     </div>
     

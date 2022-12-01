@@ -103,8 +103,96 @@
     </form>
    </div>
    <?php } ?>
+    
     <li class="green-text text-lighten-5">
         <a class="green-text text-lighten-5" href="index.php">Retour à l'index</a>
     </li>
+
+    <?php
+   $sql = "SELECT * FROM homepage"; 
+   $pre = $pdo->prepare($sql); 
+   $pre->execute();
+   $data = $pre->fetchAll(PDO::FETCH_ASSOC);
+   ?>
+   
+
+    <h2>Edit la page d'accueil du site</h2>
+    <?php 
+   foreach($data as $homepage){ ?>
+   <div class="bloc_homepage">
+    <form action="action/edit_index.php" method="post" enctype="multipart/form-data">
+        <h2><?php echo $homepage['h1']?> <br></h2>
+        <label>Titre du site</label>
+        <input type="text" name="h1">
+        <br>
+        <label >Sous Titre du Site</label>
+        <input type="text" name="h2">
+        <br>
+        <label >Texte du bouton</label>
+        <input type="text" name="button">
+        <br>
+        <label >Image du parallax</label>
+        <input type="file" name="parallax">
+        <br>
+        <label >Image de la première card</label>
+        <input type="file" name="img_card1">
+        <br>
+        <label >Image de la seconde card</label>
+        <input type="file" name="img_card2">
+        <br>
+        <label >Nom de la première card</label>
+        <input type="text" name="span_card1">
+        <br>
+        <label >Nom de la seconde card</label>
+        <input type="text" name="span_card2">
+        <br>
+        <label >Texte de la première card</label>
+        <input type="text" name="p_card1">
+        <br>
+        <label >Texte de la seconde card</label>
+        <input type="text" name="p_card2">
+        <br>
+        <button type="submit">Confirmer les modifications </button>
+    </form>
+
+    <?php } ?>
+
+    <?php
+   $sql = "SELECT * FROM contact"; 
+   $pre = $pdo->prepare($sql); 
+   $pre->execute();
+   $data = $pre->fetchAll(PDO::FETCH_ASSOC);
+   ?>
+
+    <h2>Edit la page de contact</h2>
+    <?php 
+   foreach($data as $contact){ ?>
+   <div class="bloc_contact">
+    <form action="action/edit_contact.php" method="post" enctype="multipart/form-data">
+        <h2><?php echo $contact['h1']?> <br></h2>
+        <label>Titre de la page</label>
+        <input type="text" name="h1">
+        <br>
+        <label >Paragraphe 1</label>
+        <input type="text" name="p1">
+        <br>
+        <label >Paragraphe 2</label>
+        <input type="text" name="p2">
+        <br>
+        <label >Paragraphe 3</label>
+        <input type="text" name="p3">
+        <br>
+        <label >Bouton</label>
+        <input type="sumbit" name="button">
+        <br>
+        <button type="submit">Confirmer les modifications </button>
+    </form>
+
+   </div>
+   <?php } ?>
+
+
+
+
 </body>
 </html>

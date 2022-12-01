@@ -21,10 +21,15 @@
 
 <body>
     <?php require_once "cfg/config.php" ?>
-    <?php require_once "components/nav.php" ?>
+    <?php require_once "components/nav.php";
+    $sql = "SELECT * FROM homepage";
+    $pre = $pdo->prepare($sql); 
+    $pre->execute();
+    $homepage = $pre->fetch(PDO::FETCH_ASSOC);
+    ?>
     
-    <h1 class="center green-text text-lighten-2 wow animate__animated animate__fadeInDown">Samantha & Yoann</h1>
-    <h2 class="center our_projects wow animate__animated animate__fadeInDown">Nos projets</h2>
+    <h1 class="center green-text text-lighten-2 wow animate__animated animate__fadeInDown"><?php echo $homepage['h1'] ?></h1>
+    <h2 class="center our_projects wow animate__animated animate__fadeInDown"><?php echo $homepage['h2'] ?></h2>
     
     <div id="projects" class="container wow animate__animated animate__fadeIn">
         <div class="first carousel carousel-slider center" style="height: 500px;">
@@ -38,7 +43,7 @@
                     <img src="img/<?php echo $projet['img'] ?>" alt="">
                     <div class="carousel-fixed-item center">
                         <a id="btn1" href="projects.php?id=<?php echo $projet['projects_id'] ?>"
-                        class="btn waves-effect green lighten-2 ">Voir plus</a>
+                        class="btn waves-effect green lighten-2 "><?php echo $homepage['button'] ?></a>
                     </div>   
                 </div>
             <?php } ?>
@@ -47,7 +52,7 @@
     </div>
     
     <div class="parallax-container">
-        <div class="parallax"><img class="edit" src="img/yoann-sam.jpg" alt="Sam&Yoann Portfolio photo de nous deux"></div>
+        <div class="parallax"><img class="edit" src="<?php echo $homepage['parallax'] ?>" alt="Sam&Yoann Portfolio photo de nous deux"></div>
     </div>
 
     <div id="us" class="container">
@@ -55,22 +60,22 @@
             <div class="col s12 m12 l6 wow animate__animated animate__flipInY">
                 <div class="card hoverable green lighten-4">
                     <div class="card-image">
-                        <img class="flip" src="img/sam-gang.jpg" alt="Sam&Yoann Portfolio photo de samantha trop gang car elle porte un bob avec des lunettes tah lorenzo plus un maillot de basket de kyrie irving">
-                        <span class="card-title green-text text-lighten-5">Samantha</span>
+                        <img class="flip" src="<?php echo $homepage['img_card1'] ?>" alt="Sam&Yoann Portfolio photo de samantha trop gang car elle porte un bob avec des lunettes tah lorenzo plus un maillot de basket de kyrie irving">
+                        <span class="card-title green-text text-lighten-5"><?php echo $homepage['span_card1'] ?></span>
                     </div>
                     <div class="card-content">
-                        <p class="green-text text-lighten-1">Salut, moi c'est Samantha ou ZanZam pour les intimes, j'ai 17 ans et je suis élève en première année GTech au Gaming Campus de Lyon.</p>
+                        <p class="green-text text-lighten-1"><?php echo $homepage['p_card1'] ?></p>
                     </div>
                 </div>
             </div>
             <div class="col s12 m12 l6 wow animate__animated animate__flipInY">
                 <div class="card hoverable green lighten-4">
                     <div class="card-image">
-                        <img class="flip" src="img/yoan.png" alt="Sam&Yoann Portfolio photo de yoann trop frais car il porte un costard et tiens dans ses bras une bouteille de champagne">
-                        <span class="card-title green-text text-lighten-5">Yoann</span>
+                        <img class="flip" src="<?php echo $homepage['img_card2'] ?>" alt="Sam&Yoann Portfolio photo de yoann trop frais car il porte un costard et tiens dans ses bras une bouteille de champagne">
+                        <span class="card-title green-text text-lighten-5"><?php echo $homepage['span_card2'] ?></span>
                     </div>
                     <div class="card-content">
-                        <p class="green-text text-lighten-1">Moi c'est Yoann, j'ai 18 ans et je suis également élève en première année Gtech au Gaming Campus de Lyon.</p>
+                        <p class="green-text text-lighten-1"><?php echo $homepage['p_card2'] ?></p>
                     </div>
                 </div>
             </div>
