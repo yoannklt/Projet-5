@@ -30,7 +30,7 @@ if(empty($_POST['content'])){
     exit();
 }
 
-/*a mettre dans ../contact.php ?????? demander a antoine
+/*
 
 <?php
 if(empty($_POST['email'])){
