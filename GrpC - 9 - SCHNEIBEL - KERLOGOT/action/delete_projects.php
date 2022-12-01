@@ -8,5 +8,5 @@ $dataBinded=array(
 $pre = $pdo->prepare($sql);
 $pre->execute($dataBinded);
 
-//header('Location:../pannel_admin.php');//on le redirige sur la page admin du site !
+header('Location:../pannel_admin.php');//on le redirige sur la page admin du site !
 ?>

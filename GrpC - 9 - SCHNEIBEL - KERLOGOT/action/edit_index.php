@@ -1,6 +1,7 @@
 <?php
 require_once "../cfg/config.php"; 
 $sql = "UPDATE homepage SET h1=:h1 ,h2=:h2 ,button=:button, parallax=:parallax, img_card1=:img_card1 ,img_card2=:img_card2 ,span_card1=:span_card1 ,span_card2=:span_card2 ,p_card1=:p_card1 ,p_card2=:p_card2";
+
 $destination_parallax = "img/".$_FILES['parallax']['name']; //dossier "upload"
 move_uploaded_file($_FILES['parallax']['tmp_name'],"../".$destination_parallax);
 

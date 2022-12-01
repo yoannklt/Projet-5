@@ -51,6 +51,55 @@
     </form>
    </div>
     <?php } ?>
+    <h2>Créer/Ajouter un projet</h2>
+    <?php
+   $sql = "SELECT * FROM projects"; 
+   $pre = $pdo->prepare($sql); 
+   $pre->execute();
+   $data = $pre->fetchAll(PDO::FETCH_ASSOC);
+   ?>
+   
+   <div class="bloc_projects">
+    <form action="action/add_project.php" method="post" enctype="multipart/form-data">
+
+        <label>Premier Parallax</label>
+        <input type="file" name="parallax1">
+        <br>
+        <label >Titre du Projet</label>
+        <input type="text" name="h1">
+        <br>
+        <label >Premier Sous-Titre</label>
+        <input type="text" name="h2_title">
+        <br>
+        <label >Première Description</label>
+        <input type="text" name="p1">
+        <br>
+        <label >Image Card</label>
+        <input type="file" name="img_card">
+        <br>
+        <label >Description Card</label>
+        <input type="text" name="p_card">
+        <br>
+        <label >Second Parallax</label>
+        <input type="file" name="parallax2">
+        <br>
+        <label >Image du Jeu/Projet</label>
+        <input type="file" name="img_game">
+        <br>
+        <label >Second Sous-Titre</label>
+        <input type="text" name="h2_game">
+        <br>
+        <label >Seconde Description</label>
+        <input type="text" name="p2">
+        <br>
+        <label >Image sur Carousel</label>
+        <input type="file" name="img">
+        <button type="submit" class="white color black"> Créer le Projet </button>
+    </form>
+
+
+
+
    <h2>Liste de tous les projets</h2>
    <?php
    $sql = "SELECT * FROM projects"; 
@@ -99,7 +148,7 @@
         <input type="file" name="img">
         <button type="submit" class="white color black"> Confirmer les modifications </button>
     </form>
-    <form action="action/delete_projects.php">
+    <form action="action/delete_projects.php" method="post">
         <input type="hidden" name="projects_id" value="<?php echo $projects['projects_id'] ?>">
         <button type="submit">Supprimer le Projet</button>
     </form>

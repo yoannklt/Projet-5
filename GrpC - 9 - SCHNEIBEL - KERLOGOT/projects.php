@@ -35,7 +35,7 @@
     <?php require_once "components/nav.php" ?>
 
     <div class="parallax-container">
-        <div class="parallax"><img src="img/<?php echo $project['parallax1'] ?>" alt="Sam&Yoann Portfolio image de code de programmation"></div>
+        <div class="parallax"><img src="<?php echo $project['parallax1'] ?>" alt="Sam&Yoann Portfolio image de code de programmation"></div>
     </div>
   
     <div class="row">
@@ -49,7 +49,7 @@
                 <div class="col offset-l2 offset-m3 l6 m12 s12">
                     <div class="card large green lighten-4">
                         <div class="card-image">
-                            <img src="img/<?php echo $project['img_card'] ?>" alt="Sam&Yoann Portfolio logo d'overwatch">
+                            <img src="<?php echo $project['img_card'] ?>" alt="Sam&Yoann Portfolio logo d'overwatch">
                         </div>
                         <div class="card-content">
                             <p><?php echo $project['p_card'] ?></p>
@@ -61,12 +61,12 @@
     </div>
 
     <div id="second-parallax" class="parallax-container">
-        <div class="parallax"><img class="edit" src="img/<?php echo $project['parallax2'] ?>" alt="Sam&Yoann Portfolio image de jeu video"></div>
+        <div class="parallax"><img class="edit" src="<?php echo $project['parallax2'] ?>" alt="Sam&Yoann Portfolio image de jeu video"></div>
     </div>
   
     <div id="us" class="row">
         <div class="col s12 m12 l6 wow animate__animated animate__backInLeft">
-            <img class="image" src="img/<?php echo $project['img_game'] ?>" alt="Sam&Yoann Portfolio photo du jeu overwatch présentant plusieurs personnages">
+            <img class="image" src="<?php echo $project['img_game'] ?>" alt="Sam&Yoann Portfolio photo du jeu overwatch présentant plusieurs personnages">
         </div>
         <div class="col s12 m12 l6 wow animate__animated animate__backInRight">
             <h2><?php echo $project['h2_game'] ?></h2>
