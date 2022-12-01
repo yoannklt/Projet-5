@@ -40,7 +40,7 @@
         $data = $pre->fetchAll(PDO::FETCH_ASSOC);// on stocke les données dans une variable (ici $data)
             foreach ($data as $projet){ ?>
                 <div class="carousel-item">
-                    <img src="img/<?php echo $projet['img'] ?>" alt="">
+                    <img src="<?php echo $projet['img'] ?>" alt="">
                     <div class="carousel-fixed-item center">
                         <a id="btn1" href="projects.php?id=<?php echo $projet['projects_id'] ?>"
                         class="btn waves-effect green lighten-2 "><?php echo $homepage['button'] ?></a>

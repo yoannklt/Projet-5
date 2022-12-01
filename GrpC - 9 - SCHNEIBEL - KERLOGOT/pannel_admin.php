@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pannel Admin</title>
 </head>
+
 <body>
+
     <h1>Hello Admin </h1>
     <?php
     $page = "panel-admin";
@@ -17,18 +19,19 @@
         header('Location: index.php');
         exit();
     } ?>
+
     <h2>Liste des utilisateurs</h2>
-   <?php
-   $sql = "SELECT * FROM users"; 
-   $pre = $pdo->prepare($sql); 
-   $pre->execute();
-   $data = $pre->fetchAll(PDO::FETCH_ASSOC);
-   ?>
+    <?php
+    $sql = "SELECT * FROM users"; 
+    $pre = $pdo->prepare($sql); 
+    $pre->execute();
+    $data = $pre->fetchAll(PDO::FETCH_ASSOC);
+    ?>
    
-   <?php
-   foreach($data as $user){ ?>
-   <div class="bloc_user">
-     <p><?php echo $user['user_name']?> <br> <?php echo $user['email']?> <br> <?php echo $user['password']?> <br> <?php echo $user['admin'] ?></p> 
+    <?php
+    foreach($data as $user){ ?>
+    <div class="bloc_user">
+        <p><?php echo $user['user_name']?> <br> <?php echo $user['email']?> <br> <?php echo $user['password']?> <br> <?php echo $user['admin'] ?></p> 
     <form method="post" action ="action/delete_user.php">
         <input type="hidden" name ="id" value="<?php echo $user['user_id']?>">
         <button type="submit" class="white color black"> 
@@ -49,19 +52,18 @@
             Modifier le pseudo
         </button>
     </form>
-   </div>
+    </div>
     <?php } ?>
     <h2>Créer/Ajouter un projet</h2>
     <?php
-   $sql = "SELECT * FROM projects"; 
-   $pre = $pdo->prepare($sql); 
-   $pre->execute();
-   $data = $pre->fetchAll(PDO::FETCH_ASSOC);
-   ?>
+    $sql = "SELECT * FROM projects"; 
+    $pre = $pdo->prepare($sql); 
+    $pre->execute();
+    $data = $pre->fetchAll(PDO::FETCH_ASSOC);
+    ?>
    
-   <div class="bloc_projects">
+    <div class="bloc_projects">
     <form action="action/add_project.php" method="post" enctype="multipart/form-data">
-
         <label>Premier Parallax</label>
         <input type="file" name="parallax1">
         <br>
@@ -97,20 +99,17 @@
         <button type="submit" class="white color black"> Créer le Projet </button>
     </form>
 
-
-
-
-   <h2>Liste de tous les projets</h2>
-   <?php
-   $sql = "SELECT * FROM projects"; 
-   $pre = $pdo->prepare($sql); 
-   $pre->execute();
-   $data = $pre->fetchAll(PDO::FETCH_ASSOC);
-   ?>
+    <h2>Liste de tous les projets</h2>
+    <?php
+    $sql = "SELECT * FROM projects"; 
+    $pre = $pdo->prepare($sql); 
+    $pre->execute();
+    $data = $pre->fetchAll(PDO::FETCH_ASSOC);
+    ?>
    
-   <?php 
-   foreach($data as $projects){ ?>
-   <div class="bloc_projects">
+    <?php 
+    foreach($data as $projects){ ?>
+    <div class="bloc_projects">
     <form action="action/edit_projects.php" method="post" enctype="multipart/form-data">
         <h2><?php echo $projects['h1']?> <br></h2>
         <input type="hidden" name="projects_id" value="<?php echo $projects['projects_id'] ?>">
@@ -152,21 +151,20 @@
         <input type="hidden" name="projects_id" value="<?php echo $projects['projects_id'] ?>">
         <button type="submit">Supprimer le Projet</button>
     </form>
-   </div>
-   <?php } ?>
+    </div>
+    <?php } ?>
 
     <?php
-   $sql = "SELECT * FROM homepage"; 
-   $pre = $pdo->prepare($sql); 
-   $pre->execute();
-   $data = $pre->fetchAll(PDO::FETCH_ASSOC);
-   ?>
-   
+    $sql = "SELECT * FROM homepage"; 
+    $pre = $pdo->prepare($sql); 
+    $pre->execute();
+    $data = $pre->fetchAll(PDO::FETCH_ASSOC);
+    ?>
 
     <h2>Edit la page d'accueil du site</h2>
     <?php 
-   foreach($data as $homepage){ ?>
-   <div class="bloc_homepage">
+    foreach($data as $homepage){ ?>
+    <div class="bloc_homepage">
     <form action="action/edit_index.php" method="post" enctype="multipart/form-data">
         <h2><?php echo $homepage['h1']?> <br></h2>
         <label>Titre du site</label>
@@ -205,16 +203,16 @@
     <?php } ?>
 
     <?php
-   $sql = "SELECT * FROM contact"; 
-   $pre = $pdo->prepare($sql); 
-   $pre->execute();
-   $data = $pre->fetchAll(PDO::FETCH_ASSOC);
-   ?>
+    $sql = "SELECT * FROM contact"; 
+    $pre = $pdo->prepare($sql); 
+    $pre->execute();
+    $data = $pre->fetchAll(PDO::FETCH_ASSOC);
+    ?>
 
     <h2>Edit la page de contact</h2>
     <?php 
-   foreach($data as $contact){ ?>
-   <div class="bloc_contact">
+    foreach($data as $contact){ ?>
+    <div class="bloc_contact">
     <form action="action/edit_contact.php" method="post" enctype="multipart/form-data">
         <h2><?php echo $contact['h1']?> <br></h2>
         <label>Titre de la page</label>
@@ -234,9 +232,9 @@
         <br>
         <button type="submit">Confirmer les modifications </button>
     </form>
+    </div>
 
-   </div>
-   <?php } ?>
+    <?php } ?>
 
     <li class="green-text text-lighten-5">
         <a class="green-text text-lighten-5" href="index.php">Retour à l'index</a>
