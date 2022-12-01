@@ -42,8 +42,17 @@
             Donner les droits d'administrateur
         </button>
     </form>
+    <form method="post" action="action/edit_user.php">
+        <input type="hidden" name="id" value="<?php echo $user['user_id']?>">
+        <input type="text" name="user_name" placeholder="Nouveau Pseudo">
+        <button type="submit" class="white color black">
+            Modifier le pseudo
+        </button>
+    </form>
    </div>
-   <?php } 
-   ?>
+   <?php } ?>
+    <li class="green-text text-lighten-5">
+        <a class="green-text text-lighten-5" href="index.php">Retour à l'index</a>
+    </li>
 </body>
 </html>
