@@ -50,6 +50,58 @@
         </button>
     </form>
    </div>
+    <?php } ?>
+   <h2>Liste de tous les projets</h2>
+   <?php
+   $sql = "SELECT * FROM projects"; 
+   $pre = $pdo->prepare($sql); 
+   $pre->execute();
+   $data = $pre->fetchAll(PDO::FETCH_ASSOC);
+   ?>
+   
+   <?php 
+   foreach($data as $projects){ ?>
+   <div class="bloc_projects">
+    <form action="action/add_projects" method="post" enctype="multipart/form-data">
+        <h2><?php echo $projects['h1']?> <br></h2>
+        <label>Premier Parallax</label>
+        <input type="file" name="parallax1">
+        <br>
+        <label >Titre du Projet</label>
+        <input type="text" name="h1">
+        <br>
+        <label >Premier Sous-Titre</label>
+        <input type="text" name="h2_title">
+        <br>
+        <label >Première Description</label>
+        <input type="text" name="p1">
+        <br>
+        <label >Image Card</label>
+        <input type="file" name="img_card">
+        <br>
+        <label >Description Card</label>
+        <input type="text" name="p_card">
+        <br>
+        <label >Second Parallax</label>
+        <input type="file" name="parallax2">
+        <br>
+        <label >Image du Jeu/Projet</label>
+        <input type="file" name="img_game">
+        <br>
+        <label >Second Sous-Titre</label>
+        <input type="text" name="h2_game">
+        <br>
+        <label >Seconde Description</label>
+        <input type="text" name="h1">
+        <br>
+        <label >Image sur Carousel</label>
+        <input type="file" name="img">
+    </form>
+    <form action="action/delete_projects.php">
+        <input type="hidden" name="projects_id" value="<?php echo $projects['projects_id'] ?>">
+        <button type="submit">Supprimer le Projet</button>
+    </form>
+   </div>
    <?php } ?>
     <li class="green-text text-lighten-5">
         <a class="green-text text-lighten-5" href="index.php">Retour à l'index</a>

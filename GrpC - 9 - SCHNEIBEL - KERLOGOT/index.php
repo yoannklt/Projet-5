@@ -28,23 +28,21 @@
     
     <div id="projects" class="container wow animate__animated animate__fadeIn">
         <div class="first carousel carousel-slider center" style="height: 500px;">
-            <div class="first-project carousel-item">
-                <div class="carousel-fixed-item center">
-                    <a id="btn1" href="first_project.php"
+        <?php 
+        $sql = "SELECT * FROM projects"; //votre requêtes SQL (vous savez faire maintenant héhé !)
+        $pre = $pdo->prepare($sql); //on prévient la base de données qu'on va executer une requête
+        $pre->execute();//on l'execute
+        $data = $pre->fetchAll(PDO::FETCH_ASSOC);// on stocke les données dans une variable (ici $data)
+            foreach ($data as $projet){ ?>
+                <div class="carousel-item">
+                    <img src="img/<?php echo $projet['img'] ?>" alt="">
+                    <div class="carousel-fixed-item center">
+                        <a id="btn1" href="projects.php?id=<?php echo $projet['projects_id'] ?>"
                         class="btn waves-effect green lighten-2 ">Voir plus</a>
-                </div>   
-            </div>
-            <div class="second-project carousel-item">
-                <div class="carousel-fixed-item center">
-                    <a id="btn2" href="second_project.php"
-                        class="btn waves-effect green lighten-2">Voir plus</a>
+                    </div>   
                 </div>
-            </div>
-            <div class="third-project carousel-item">
-                <div class="carousel-fixed-item center">
-                    <a id="btn3" href="third_project.php" class="btn waves-effect green lighten-2">Voir plus</a>
-                </div>
-            </div>
+            <?php } ?>
+            
         </div>
     </div>
     

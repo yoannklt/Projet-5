@@ -20,28 +20,39 @@
 </head>
 
 <body>
+    <?php 
+    require_once "cfg/config.php"; 
+    $sql = "SELECT * FROM projects WHERE projects_id=:id";
+    $dataBinded=array(
+        ':id' => $_GET['id']
+
+    );
+    $pre = $pdo->prepare($sql); 
+    $pre->execute($dataBinded);
+    $project = $pre->fetch(PDO::FETCH_ASSOC);
+    ?>
     <?php require_once "cfg/config.php" ?>
     <?php require_once "components/nav.php" ?>
 
     <div class="parallax-container">
-        <div class="parallax"><img src="img/programming.jpg" alt="Sam&Yoann Portfolio image de code de programmation"></div>
+        <div class="parallax"><img src="img/<?php echo $project['parallax1'] ?>" alt="Sam&Yoann Portfolio image de code de programmation"></div>
     </div>
   
     <div class="row">
         <div class="wow animate__animated animate__backInLeft introduction-1 col l6 m4 s12">
-            <h1>Projet HTML & CSS</h1>
-            <h2>Création d'un site internet sur Overwatch</h2>
-            <p>Ce projet est le premier de notre scolarité en tant qu'élève GTech du Gaming Campus. Le but du projet était de réaliser un site internet de notre jeu vidéo préféré en utilisant les premiers langages de codage de page web : le HTML et le CSS. Venant de sortir, la suite du premier opus nous à redonner envie de jouer à celui-ci c'est donc naturellement que nous avons choisis Overwatch 2. Le site était assez simple à créer mais les points ont surtout été perdu sur l'optimisation. Nous avons beaucoup appris sur ces deux langages de programmation et même si le site est loin d'être parfait on s'est bien amusé et il nous tiens a coeur car c'est le premier projet qu'on à réalisé et on en était plutôt fièrs !</p>
+            <h1><?php echo $project['h1'] ?> </h1>
+            <h2><?php echo $project['h2_title'] ?></h2>
+            <p><?php echo $project['p1'] ?></p>
         </div>
         <div class="col l6 m6 s12 wow animate__animated animate__backInRight">
             <div class="row">
                 <div class="col offset-l2 offset-m3 l6 m12 s12">
                     <div class="card large green lighten-4">
                         <div class="card-image">
-                            <img src="img/site-overwatch.png" alt="Sam&Yoann Portfolio logo d'overwatch">
+                            <img src="img/<?php echo $project['img_card'] ?>" alt="Sam&Yoann Portfolio logo d'overwatch">
                         </div>
                         <div class="card-content">
-                            <p>Projet réalisé en coopération par Samantha et Yoann.</p>
+                            <p><?php echo $project['p_card'] ?></p>
                         </div>
                     </div>
                 </div>
@@ -50,22 +61,30 @@
     </div>
 
     <div id="second-parallax" class="parallax-container">
-        <div class="parallax"><img class="edit" src="img/image-jeu-video-random.jpg" alt="Sam&Yoann Portfolio image de jeu video"></div>
+        <div class="parallax"><img class="edit" src="img/<?php echo $project['parallax2'] ?>" alt="Sam&Yoann Portfolio image de jeu video"></div>
     </div>
   
     <div id="us" class="row">
         <div class="col s12 m12 l6 wow animate__animated animate__backInLeft">
-            <img class="image" src="img/overwatch-team.jpg" alt="Sam&Yoann Portfolio photo du jeu overwatch présentant plusieurs personnages">
+            <img class="image" src="img/<?php echo $project['img_game'] ?>" alt="Sam&Yoann Portfolio photo du jeu overwatch présentant plusieurs personnages">
         </div>
         <div class="col s12 m12 l6 wow animate__animated animate__backInRight">
-            <h2>Site internet sur le thème d'Overwatch</h2>
-            <p>Le site était censé être sur Zelda Breath of the Wild mais la sortie récente d'Overwatch 2 nous a influencé dans sa création. Nous sommes fiers du rendu qui est propre et épuré.</p>
+            <h2><?php echo $project['h2_game'] ?></h2>
+            <p><?php echo $project['p2'] ?></p>
         </div>
     </div>
 
     <ul class="pagination center wow animate__animated animate__backInUp">
-        
-        <li class="waves-effect"><a class="green-text text-lighten-2" href="third_project.php">3</a></li>
+        <?php 
+            $sql = "SELECT * FROM projects"; //votre requêtes SQL (vous savez faire maintenant héhé !)
+            $pre = $pdo->prepare($sql); //on prévient la base de données qu'on va executer une requête
+            $pre->execute();//on l'execute
+            $data = $pre->fetchAll(PDO::FETCH_ASSOC);// on stocke les données dans une variable (ici $data)
+            $i = 1;
+            foreach ($data as $projets){ ?>
+                <li class="waves-effect"><a class="green-text text-lighten-2" href="projects.php?id=<?php echo $projets['projects_id'] ?>"><?php echo $i ?></a></li>
+                <?php $i++ ?>
+        <?php } ?>
     </ul>
 
     <?php require_once "components/footer.php" ?>
