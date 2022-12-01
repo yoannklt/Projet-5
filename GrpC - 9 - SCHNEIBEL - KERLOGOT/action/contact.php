@@ -13,9 +13,9 @@ $email = "samsc2004@gmail.com";
 $objet = $_POST['objet'];
 $content = $_POST['content']."<br><br>Email from : ".$_POST['content'];
 if(mail($email,$objet,$content)){
-    echo "Votre mail à bien été envoyé";
-}else{
     $_SESSION['succes']= "Votre mail à bien été envoyé";
+}else{
+    $_SESSION['error']= "Votre mail à bien été envoyé";
 }
 
 if(empty($_POST['email'])){
