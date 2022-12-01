@@ -105,10 +105,6 @@
     </form>
    </div>
    <?php } ?>
-    
-    <li class="green-text text-lighten-5">
-        <a class="green-text text-lighten-5" href="index.php">Retour à l'index</a>
-    </li>
 
     <?php
    $sql = "SELECT * FROM homepage"; 
@@ -193,8 +189,9 @@
    </div>
    <?php } ?>
 
-
-
+    <li class="green-text text-lighten-5">
+        <a class="green-text text-lighten-5" href="index.php">Retour à l'index</a>
+    </li>
 
 </body>
 </html>
