@@ -9,8 +9,7 @@ $pre->execute(array(
 ));
 $user = $pre->fetch(PDO::FETCH_ASSOC);
 if(empty($user)){ //vérifie si le resultat est vide !
-     //non connecté
-     echo "Utilisateur ou mot de passe incorrect !";
+     $_SESSION['error']= "Utilisateur ou mot de passe incorrect !";
 }else{
      $_SESSION['user']= $user; //on enregistre que l'utilisateur est connecté
      $_SESSION['success']= "Vous êtes connecté.";
