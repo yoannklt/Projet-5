@@ -5,10 +5,12 @@
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a class="green-text text-lighten-5" href="#projects">Projets</a></li>
                 <li><a class="ekip green-text text-lighten-5" href="#us">équipe</a></li>
+
                 <?php 
                 if(isset($_SESSION['user']) && $_SESSION['user']['admin']==1){ ?>
                     <li><a class="green-text text-lighten-5" href="pannel_admin.php">Pannel Admin</a></li>
                 <?php } ?> 
+
                 <li>
                     <?php if(isset($_SESSION['user'])) { ?>
                         <form action="action/logout.php" method="post"> 
